@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Mehmet Cömert - CV</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 12mm 15mm;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #1a1a1a;
+      background: #ffffff;
+      line-height: 1.45;
+      font-size: 11pt;
+    }
+    .header {
+      border-bottom: 2px solid #0f172a;
+      padding-bottom: 12px;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: 24pt;
+      font-weight: 800;
+      color: #09090b;
+      letter-spacing: -0.5px;
+      text-transform: uppercase;
+    }
+    .subtitle {
+      font-size: 11.5pt;
+      font-weight: 600;
+      color: #0284c7;
+      margin-top: 3px;
+    }
+    .contact-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 8px;
+      font-size: 9pt;
+      color: #475569;
+    }
+    .contact-item strong {
+      color: #0f172a;
+    }
+    .section {
+      margin-bottom: 13px;
+    }
+    .section-title {
+      font-size: 10.5pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #0f172a;
+      border-bottom: 1px solid #cbd5e1;
+      padding-bottom: 3px;
+      margin-bottom: 7px;
+    }
+    .summary-text {
+      font-size: 9.3pt;
+      color: #334155;
+      text-align: justify;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      font-size: 9pt;
+    }
+    .skill-block strong {
+      color: #0f172a;
+      display: block;
+      margin-bottom: 1px;
+    }
+    .skill-block span {
+      color: #475569;
+    }
+    .project-card {
+      border-left: 3px solid #0284c7;
+      padding-left: 10px;
+      margin-bottom: 10px;
+    }
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .project-title {
+      font-size: 10pt;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .project-badge {
+      font-size: 8pt;
+      background: #f0f9ff;
+      border: 1px solid #bae6fd;
+      color: #0369a1;
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    .project-tech {
+      font-size: 8.5pt;
+      color: #64748b;
+      margin-top: 1px;
+    }
+    .project-desc {
+      font-size: 9pt;
+      color: #334155;
+      margin-top: 3px;
+      padding-left: 14px;
+    }
+    .project-desc li {
+      margin-bottom: 2px;
+    }
+    .project-link {
+      font-size: 8pt;
+      color: #0284c7;
+      margin-top: 3px;
+    }
+    .education-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .edu-title {
+      font-size: 10pt;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .edu-badge {
+      font-size: 8.5pt;
+      color: #64748b;
+    }
+    .edu-sub {
+      font-size: 9pt;
+      color: #0284c7;
+      font-weight: 600;
+      margin-top: 1px;
+    }
+    .edu-desc {
+      font-size: 8.5pt;
+      color: #475569;
+      margin-top: 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>MEHMET CÖMERT</h1>
+    <div class="subtitle">Mobil (Flutter), React & Yapay Zeka (AI) Odaklı Yazılım Geliştirici</div>
+    <div class="contact-bar">
+      <div class="contact-item"><strong>Telefon:</strong> 0537 797 89 22</div>
+      <div class="contact-item"><strong>E-Posta:</strong> mehmetc4122@gmail.com</div>
+      <div class="contact-item"><strong>Konum:</strong> Körfez, Kocaeli</div>
+      <div class="contact-item"><strong>GitHub:</strong> github.com/luxiq213</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Özet & Profil</div>
+    <p class="summary-text">
+      Ondokuz Mayıs Üniversitesi Bilgisayar Programcılığı mezunuyum. Özellikle <strong>Flutter & Dart</strong> kullanarak hem 
+      <strong>Google Play Store</strong> hem de <strong>Apple App Store</strong> üzerinde aktif ve canlı yayında olan mobil uygulamalar (MangaLens, Astro Yapıcı) 
+      geliştirdim. Web tarafında <strong>React ekosistemine derin bir ilgi duyuyor</strong> ve modern kullanıcı arayüzleri üretiyorum. 
+      Aynı zamanda <strong>hızla gelişen Yapay Zeka (AI) ve LLM dünyasını aktif olarak takip eden</strong>, yapay zeka araçlarını ve istem mühendisliğini (Prompt Engineering) 
+      projelerine (propromptgen.com) ve geliştirme süreçlerine entegre eden vizyoner bir geliştiriciyim. 
+      Temiz kod, yüksek performans ve son kullanıcı odaklı çalışma disiplinine sahibim.
+    </p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Teknik Yetenekler</div>
+    <div class="skills-grid">
+      <div class="skill-block">
+        <strong>Mobil Geliştirme (Flutter):</strong>
+        <span>Flutter, Dart, Cross-Platform (iOS & Android), Bloc / Provider / Riverpod, UI/UX, Cihaz API'leri, Play Console & App Store Connect.</span>
+      </div>
+      <div class="skill-block">
+        <strong>Web & React Ekosistemi:</strong>
+        <span>React.js (Yüksek İlgi & Pratik), Next.js 15+, TypeScript, JavaScript, Tailwind CSS, Three.js WebGL, HTML5/CSS3.</span>
+      </div>
+      <div class="skill-block">
+        <strong>Yapay Zeka (AI) & İstem Mühendisliği:</strong>
+        <span>Aktif AI & LLM Takibi, Prompt Engineering, AI API Entegrasyonları (LLM / Vision), Yapay Zeka Destekli Geliştirme Araçları.</span>
+      </div>
+      <div class="skill-block">
+        <strong>Backend, Veritabanı & Araçlar:</strong>
+        <span>RESTful API Entegrasyonu, Firebase, SQL (MySQL, MS SQL, PostgreSQL), Prisma ORM, Git & GitHub, Postman, Vercel.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Canlı Projeler & Yayınlanan Uygulamalar</div>
+
+    <div class="project-card">
+      <div class="project-header">
+        <span class="project-title">MangaLens — Mobil Uygulama (Android & iOS)</span>
+        <span class="project-badge">Google Play & App Store Canlı</span>
+      </div>
+      <div class="project-tech">Flutter, Dart, Cross-Platform, Google Play Store, Apple App Store, REST API</div>
+      <ul class="project-desc">
+        <li>Flutter ile tek kod tabanından (single codebase) hem iOS hem Android için derlendi ve mağazalarda yayınlandı.</li>
+        <li>Görsel işleme, akıcı sayfa gezintisi ve mobil performans optimizasyonları uygulandı.</li>
+        <li>Google Play Console ve App Store Connect mağaza test ve onay süreçleri sıfırdan başarıyla yönetildi.</li>
+      </ul>
+      <div class="project-link">Play Store: play.google.com/store/apps/details?id=com.mangalens.app</div>
+    </div>
+
+    <div class="project-card" style="border-left-color: #8b5cf6;">
+      <div class="project-header">
+        <span class="project-title">ProPromptGen — Yapay Zeka & İstem Platformu</span>
+        <span class="project-badge" style="background:#faf5ff; border-color:#e9d5ff; color:#7e22ce;">propromptgen.com Canlı</span>
+      </div>
+      <div class="project-tech">React, Next.js, TypeScript, Tailwind CSS, AI Prompt Engineering, Vercel</div>
+      <ul class="project-desc">
+        <li>Yapay zeka modelleri için optimize edilmiş prompt üretimi sunan canlı web platformu.</li>
+        <li>React mimarisi, gelişmiş parametreleme, yüksek hızlı kopyalama ve modern responsive arayüz tasarlandı.</li>
+      </ul>
+      <div class="project-link" style="color:#7e22ce;">Canlı Bağlantı: propromptgen.com</div>
+    </div>
+
+    <div class="project-card" style="border-left-color: #10b981;">
+      <div class="project-header">
+        <span class="project-title">Astro Yapıcı — Android Mobil Uygulama</span>
+        <span class="project-badge" style="background:#ecfdf5; border-color:#a7f3d0; color:#047857;">Google Play Canlı</span>
+      </div>
+      <div class="project-tech">Flutter, Dart, Google Play Store, Local State & Storage</div>
+      <ul class="project-desc">
+        <li>Google Play Store üzerinde aktif kullanıcıya sahip astrolojik analiz ve doğum haritası hesaplama aracı.</li>
+        <li>Tarih ve konum bazlı dinamik algoritma mantığı ve yerel veri saklama mekanizmaları entegre edildi.</li>
+      </ul>
+      <div class="project-link" style="color:#047857;">Play Store: play.google.com/store/apps/details?id=com.astro.yapici</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Eğitim</div>
+    <div class="education-item">
+      <div class="edu-title">Ondokuz Mayıs Üniversitesi (OMÜ)</div>
+      <div class="edu-badge">Mezun</div>
+    </div>
+    <div class="edu-sub">Bilgisayar Programcılığı (Ön Lisans)</div>
+    <div class="edu-desc">
+      Temel Dersler: Algoritmalar, Nesne Yönelimli Programlama (OOP), Veritabanı Yönetim Sistemleri (SQL), Web ve Mobil Programlama.
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Diller & Yaklaşım</div>
+    <div style="display:flex; justify-content:space-between; font-size:8.5pt; color:#334155;">
+      <div><strong>Yabancı Dil:</strong> Türkçe (Ana Dil), İngilizce (Mesleki / Teknik Dokümantasyon)</div>
+      <div><strong>Disiplin:</strong> Aktif Yapay Zeka Entegrasyonu, Hızlı Adaptasyon, Mağaza Dağıtımı, Git & Takım Çalışması</div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Three.js Destekli 3D Animasyonlu Geliştirici Portföyü
 
-## Getting Started
+Bilgisayar Programcılığı mezuniyetine ve yazılım yeteneklerine özel; [threejs.org](https://threejs.org/) tarzında zengin 3D WebGL animasyonları, 3D tilt kartları ve interaktif hacker konsolu içeren modern portföy sitesi.
 
-First, run the development server:
+---
+
+## 🚀 Öne Çıkan Özellikler
+
+1. **Three.js WebGL 3D Uzay Alanı:** 2000+ neon parçacık, süzülen tel kafes (wireframe) 3D geometriler ve fare/parmak hareketine duyarlı kamera derinliği.
+2. **İnteraktif 3D Dönen Küp:** Hero bölümünde kullanıcının fareyle tutup 3D uzayda döndürebileceği neon halkalı Three.js kristal küpü.
+3. **3D Tilt Cam Kartlar:** Projelerin üzerine gelindiğinde farenin açısına göre 3D derinlik ve parlama (glare) efekti alan cam (glassmorphism) kartlar.
+4. **İnteraktif Terminal Konsolu:** `help`, `whoami`, `skills`, `projects`, `sudo hire` ve `clear` gibi komutlarla çalışan retro-fütüristik hacker konsolu.
+5. **Kişiselleştirilebilir Veri Mimarisi:** Tüm isim, iletişim, yetenek, proje ve eğitim bilgileri tek bir dosyadan (`src/data/portfolioData.ts`) kolayca yönetilebilir.
+6. **Vercel Uyumlu:** Next.js 16 (App Router) + Turbopack ile sıfır ek ayar gerektirmeden Vercel'de tek tıkla canlıya alınabilir.
+
+---
+
+## 🛠️ Yerel Geliştirme (Localhost)
+
+Projeyi bilgisayarında çalıştırmak için:
 
 ```bash
+# Proje dizinine git
+cd c:\Users\mehme\Desktop\portfolio
+
+# Geliştirici sunucusunu başlat
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Tarayıcında `http://localhost:3000` adresini açarak siteyi canlı görüntüleyebilirsin.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ✏️ Kendi Bilgilerini Nasıl Düzenlersin?
 
-## Learn More
+Tek yapman gereken [`src/data/portfolioData.ts`](./src/data/portfolioData.ts) dosyasını açıp bilgileri değiştirmek:
 
-To learn more about Next.js, take a look at the following resources:
+- **Ad & Unvan:** `personal.name`, `personal.fullName`, `personal.typewriterRoles`
+- **E-posta & Sosyal Medya:** `personal.email`, `personal.github`, `personal.linkedin`
+- **Yetenekler:** `skills` dizisinden dilediğin dilleri/araçları ekleyip çıkarabilirsin.
+- **Projeler:** `projects` dizisinden projelerinin başlık, açıklama ve GitHub bağlantılarını güncelleyebilirsin.
+- **Eğitim & Zaman Tüneli:** `timeline` dizisinden mezuniyet ve staj bilgilerini özelleştirebilirsin.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🌐 Vercel'e Nasıl Deploy Edilir?
 
-## Deploy on Vercel
+1. **GitHub'a Gönder:**
+   ```bash
+   git add .
+   git commit -m "feat: 3D animated portfolio ready"
+   # Eğer GitHub reponu bağladıysan:
+   git push origin main
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. **Vercel'e Bağla:**
+   - [vercel.com](https://vercel.com) adresine git ve giriş yap.
+   - **"Add New Project"** butonuna bas.
+   - GitHub'daki `portfolio` reponu seç ve **"Deploy"** butonuna tıkla!
+   - 1 dakika içinde projen `https://senin-adın.vercel.app` şeklinde ücretsiz olarak tüm dünyada yayında!
