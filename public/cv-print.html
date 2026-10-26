@@ -6,7 +6,7 @@
   <style>
     @page {
       size: A4;
-      margin: 7mm 12mm;
+      margin: 11mm 15mm;
     }
     * {
       box-sizing: border-box;
@@ -17,74 +17,67 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       color: #1a1a1a;
       background: #ffffff;
-      line-height: 1.3;
-      font-size: 9.5pt;
+      line-height: 1.42;
+      font-size: 9.8pt;
     }
     .header {
       border-bottom: 2px solid #0f172a;
-      padding-bottom: 6px;
-      margin-bottom: 7px;
+      padding-bottom: 10px;
+      margin-bottom: 12px;
     }
     h1 {
-      font-size: 20pt;
+      font-size: 23pt;
       font-weight: 800;
       color: #09090b;
       letter-spacing: -0.5px;
       text-transform: uppercase;
     }
     .subtitle {
-      font-size: 10pt;
-      font-weight: 600;
+      font-size: 11.5pt;
+      font-weight: 700;
       color: #0284c7;
-      margin-top: 1px;
+      margin-top: 2px;
+    }
+    .sub-caption {
+      font-size: 9.4pt;
+      color: #334155;
+      font-weight: 500;
+      margin-top: 2px;
     }
     .contact-bar {
       display: flex;
       flex-wrap: wrap;
-      gap: 2px 13px;
-      margin-top: 4px;
-      font-size: 8.2pt;
+      gap: 5px 16px;
+      margin-top: 8px;
+      font-size: 9pt;
       color: #475569;
     }
     .contact-item strong {
       color: #0f172a;
     }
     .section {
-      margin-bottom: 6.5px;
+      margin-bottom: 12px;
     }
     .section-title {
-      font-size: 9.2pt;
+      font-size: 10.2pt;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.7px;
+      letter-spacing: 0.8px;
       color: #0f172a;
-      border-bottom: 1px solid #cbd5e1;
-      padding-bottom: 1.5px;
-      margin-bottom: 3.5px;
+      border-bottom: 1.5px solid #cbd5e1;
+      padding-bottom: 3px;
+      margin-bottom: 8px;
     }
     .summary-text {
-      font-size: 8.4pt;
+      font-size: 9.3pt;
       color: #334155;
       text-align: justify;
-    }
-    .skills-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4px 10px;
-      font-size: 8.1pt;
-    }
-    .skill-block strong {
-      color: #0f172a;
-      display: block;
-      margin-bottom: 0.5px;
-    }
-    .skill-block span {
-      color: #475569;
+      line-height: 1.46;
     }
     .project-card {
-      border-left: 3px solid #0284c7;
-      padding-left: 8px;
-      margin-bottom: 5.5px;
+      border-left: 3.5px solid #0284c7;
+      padding-left: 11px;
+      margin-bottom: 11px;
     }
     .project-header {
       display: flex;
@@ -92,37 +85,76 @@
       align-items: baseline;
     }
     .project-title {
-      font-size: 9.1pt;
+      font-size: 10pt;
       font-weight: 700;
       color: #0f172a;
     }
     .project-badge {
-      font-size: 7.5pt;
+      font-size: 8.2pt;
       background: #f0f9ff;
       border: 1px solid #bae6fd;
       color: #0369a1;
-      padding: 1px 5px;
+      padding: 1.5px 7px;
       border-radius: 4px;
       font-weight: 600;
     }
     .project-tech {
-      font-size: 7.8pt;
-      color: #64748b;
-      margin-top: 0.5px;
+      font-size: 8.6pt;
+      color: #475569;
+      margin-top: 2px;
+      font-weight: 500;
     }
     .project-desc {
-      font-size: 8.2pt;
+      font-size: 9.1pt;
       color: #334155;
-      margin-top: 1.5px;
-      padding-left: 13px;
+      margin-top: 4px;
+      padding-left: 15px;
+      line-height: 1.42;
     }
     .project-desc li {
-      margin-bottom: 1px;
+      margin-bottom: 3px;
     }
     .project-link {
-      font-size: 7.6pt;
+      font-size: 8.4pt;
       color: #0284c7;
-      margin-top: 1.5px;
+      margin-top: 3px;
+      font-weight: 500;
+    }
+    .page-break {
+      page-break-before: always;
+      break-before: page;
+    }
+    .skill-list {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      font-size: 9.1pt;
+      color: #334155;
+      line-height: 1.44;
+    }
+    .skill-row {
+      padding: 6.5px 10px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+    }
+    .skill-row strong {
+      color: #0f172a;
+      display: block;
+      font-size: 9.4pt;
+      margin-bottom: 1.5px;
+    }
+    .case-card {
+      border-left: 3px solid #0f172a;
+      padding-left: 10px;
+      margin-bottom: 9px;
+      font-size: 9.1pt;
+      color: #334155;
+      line-height: 1.44;
+    }
+    .case-card strong {
+      color: #0f172a;
+      font-size: 9.4pt;
     }
     .education-item {
       display: flex;
@@ -135,19 +167,21 @@
       color: #0f172a;
     }
     .edu-badge {
-      font-size: 8.5pt;
-      color: #64748b;
+      font-size: 8.8pt;
+      color: #475569;
+      font-weight: 600;
     }
     .edu-sub {
-      font-size: 9pt;
+      font-size: 9.3pt;
       color: #0284c7;
       font-weight: 600;
-      margin-top: 1px;
+      margin-top: 1.5px;
     }
     .edu-desc {
-      font-size: 8.5pt;
+      font-size: 9pt;
       color: #475569;
-      margin-top: 2px;
+      margin-top: 3px;
+      line-height: 1.42;
     }
   </style>
 </head>
@@ -223,13 +257,44 @@
     </div>
   </div>
 
+  <!-- PAGE 2: Skills, Engineering Architecture Cases, Education & Languages -->
+  <div class="page-break"></div>
+
   <div class="section">
     <div class="section-title">Teknik Yetkinlikler (Proje Kullanımına Göre)</div>
-    <div style="display: flex; flex-direction: column; gap: 3px; font-size: 8.2pt; color: #334155;">
-      <div><strong style="color:#0f172a;">Flutter &amp; Mobil Geliştirme:</strong> Flutter, Dart, Riverpod (State Management), InAppWebView &amp; JS Bridge (DOM Overlay), RevenueCat (IAP / Abonelik), AdMob SSV, SharedPreferences &amp; Hive, Çoklu Dil / l10n (RTL dahil).</div>
-      <div><strong style="color:#0f172a;">Mobil Ürün Kalitesi &amp; Dağıtım:</strong> Google Play Console &amp; Apple App Store Connect (Xcode imzalama, TestFlight, Store Review), Codemagic CI/CD, Birim &amp; Widget Testleri (flutter test, flutter analyze), p50/p95 Gecikme Telemetrisi.</div>
-      <div><strong style="color:#0f172a;">API, Backend &amp; Güvenlik:</strong> Supabase (PostgreSQL, RLS, Edge Functions / Deno, Anonim + OAuth Auth), Sunucu Tarafı Sır/Anahtar İzolasyonu, SHA-256 Önbellekleme (Cache), Paralel Çalışma Kilitleri (Work Leases), Atomik Ledger RPC &amp; Dağıtık Rate Limiting.</div>
-      <div><strong style="color:#0f172a;">React, Next.js &amp; Web:</strong> Next.js 16 (App Router, SSR/SEO), React 19, TypeScript, Prisma ORM, PostgreSQL, NextAuth (bcryptjs, SHA-256 Token), Stripe Webhooks, Tailwind CSS.</div>
+    <div class="skill-list">
+      <div class="skill-row">
+        <strong>Flutter &amp; Mobil Uygulama Geliştirme</strong>
+        <span>Flutter, Dart, Riverpod (State Management), InAppWebView &amp; JavaScript Köprüsü (DOM Overlay Mimarisi), RevenueCat (IAP &amp; Abonelik Yönetimi), Google Mobile Ads (AdMob SSV), SharedPreferences &amp; Hive Yerel Depolama, Çoklu Dil / l10n (18 Dil &amp; RTL Desteği).</span>
+      </div>
+      <div class="skill-row">
+        <strong>Mobil Ürün Kalitesi, Test &amp; Mağaza Dağıtımı</strong>
+        <span>Google Play Console &amp; Apple App Store Connect (Xcode İmzalama, TestFlight, Store Review Süreçleri), Codemagic CI/CD, Otomatik Birim &amp; Widget Testleri (flutter test, flutter analyze sıfır hata), İstemci Performans ve Gecikme Telemetrisi (p50/p95 ölçümü).</span>
+      </div>
+      <div class="skill-row">
+        <strong>API, Backend, Veritabanı &amp; Güvenlik Mimarisi</strong>
+        <span>Supabase (PostgreSQL, Row Level Security / RLS, Edge Functions / Deno, Anonim Oturumdan OAuth/E-Posta Hesabına Yükseltme), Sunucu Tarafı Sır/Anahtar İzolasyonu, SHA-256 Görsel Önbellekleme (24s Cache), Paralel Çalışma Kilitleri (Work Leases), Değişmez Muhasebe Defteri (Immutable Ledger) RPC&apos;leri, Dağıtık Rate Limiting, HTTPS/SSRF Kontrolleri.</span>
+      </div>
+      <div class="skill-row">
+        <strong>React, Next.js &amp; Modern Web Geliştirme</strong>
+        <span>Next.js 16 (App Router, Server-Side Rendering, Dinamik SEO), React 19, TypeScript (Tip Güvenli Geliştirme), Prisma ORM, PostgreSQL, NextAuth (bcryptjs, SHA-256 Token Özetleme), Stripe Abonelik &amp; Webhook Entegrasyonu, Tailwind CSS, Three.js (3D WebGL), Critters Kritik CSS &amp; Web Vitals.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Öne Çıkan Mühendislik Kararları &amp; Mimari Çözümler</div>
+    <div class="case-card">
+      <strong>1. Kaynak Görseli Bozmadan Gerçek Zamanlı Çeviri Katmanı (MangaLens):</strong>
+      <div>Sayfa görsellerini yeniden işleyip kalite ve hız kaybetmek yerine, <em>InAppWebView</em> üzerinde JavaScript köprüsüyle çalışan ayrık DOM overlay mimarisi kuruldu. Uzun dikey manga şeritleri görünür bölge öncelikli parçalara (tiling) bölünerek ilk çeviri katmanı görünme süresi (<em>time_to_first_translation_overlay_ms</em>) düşürüldü ve kaydırma/zoom sırasında koordinat senkronizasyonu korundu.</div>
+    </div>
+    <div class="case-card" style="border-left-color: #0284c7;">
+      <strong>2. AI API Maliyet Koruması ve İdempotent Kredi Muhasebesi (MangaLens):</strong>
+      <div>Mobil istemciye hiçbir gizli anahtar gömülmeden tüm Gemini çağrıları Supabase Edge Functions arkasına alındı. Görsel URL&apos;nin SHA-256 özetiyle 24 saatlik önbellek ve paralel <em>translation_work_leases</em> kilitleri uygulanarak aynı sayfa için mükerrer LLM çağrıları engellendi. Başarısız çeviri isteklerinde kredi iadesi ve RevenueCat/AdMob SSV bakiye yüklemeleri atomik PostgreSQL RPC&apos;leriyle garanti altına alındı.</div>
+    </div>
+    <div class="case-card" style="border-left-color: #8b5cf6;">
+      <strong>3. Kesintiye Dayanıklı (Fault-Tolerant) Hibrit Prompt Üretimi (ProPromptGen):</strong>
+      <div>Harici LLM API gecikmeleri veya kota sınırlarında kullanıcı deneyiminin kesintiye uğramaması için <em>@google/generative-ai</em> çağrısının arkasına 50+ AI platformuna özel kural/şablon derleyici (fallback engine) ve PostgreSQL üzerinde serverless örnekler arası paylaşılan kalıcı <em>RateLimit</em> koruma katmanı eklendi.</div>
     </div>
   </div>
 
@@ -241,15 +306,15 @@
     </div>
     <div class="edu-sub">Bilgisayar Programcılığı (Ön Lisans)</div>
     <div class="edu-desc">
-      Temel Dersler: Algoritmalar, Nesne Yönelimli Programlama (OOP), Veritabanı Yönetim Sistemleri (SQL), Web ve Mobil Programlama.
+      Temel Dersler: Algoritmalar ve Veri Yapıları, Nesne Yönelimli Programlama (OOP), İlişkisel Veritabanı Yönetim Sistemleri (SQL), Web ve Mobil Programlama.
     </div>
   </div>
 
   <div class="section">
-    <div class="section-title">Diller & Yaklaşım</div>
-    <div style="display:flex; justify-content:space-between; font-size:8.5pt; color:#334155;">
-      <div><strong>Yabancı Dil:</strong> Türkçe (Ana Dil), İngilizce (Mesleki / Teknik Dokümantasyon)</div>
-      <div><strong>Disiplin:</strong> Aktif Yapay Zeka Entegrasyonu, Hızlı Adaptasyon, Mağaza Dağıtımı, Git & Takım Çalışması</div>
+    <div class="section-title">Diller &amp; Çalışma Disiplini</div>
+    <div style="display:flex; flex-direction:column; gap:5px; font-size:9.4pt; color:#334155;">
+      <div><strong style="color:#0f172a;">Yabancı Dil:</strong> Türkçe (Ana Dil) • İngilizce (Mesleki / Teknik Dokümantasyon Okuma ve Geliştirme)</div>
+      <div><strong style="color:#0f172a;">Mühendislik Yaklaşımı:</strong> Uçtan Uca Ürün Sahipliği (Tasarım → Geliştirme → Otomatik Test → Mağaza Yayını), Güvenlik Öncelikli API Mimarisi, Maliyet/Performans Ölçümü ve Git İş Akışı</div>
     </div>
   </div>
 

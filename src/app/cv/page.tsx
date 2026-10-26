@@ -197,15 +197,48 @@ export default function CvPage() {
         </section>
 
         {/* Section 3: Technical Skills (Single-column ATS layout, project-grounded) */}
-        <section className="mb-6">
-          <h2 className="text-sm font-bold uppercase tracking-wider text-zinc-950 border-b border-zinc-300 pb-1 mb-2.5">
+        <section className="mb-8 print:break-before-page">
+          <h2 className="text-base font-bold uppercase tracking-wider text-zinc-950 border-b-2 border-zinc-300 pb-1.5 mb-3.5">
             Teknik Yetkinlikler (Proje Kullanımına Göre)
           </h2>
-          <div className="space-y-1.5 text-xs text-zinc-800">
-            <p><strong className="text-zinc-950">Flutter &amp; Mobil Geliştirme:</strong> Flutter, Dart, Riverpod (State Management), InAppWebView &amp; JS Bridge (DOM Overlay), RevenueCat (IAP / Abonelik), AdMob SSV, SharedPreferences &amp; Hive, Çoklu Dil / l10n (RTL dahil).</p>
-            <p><strong className="text-zinc-950">Mobil Ürün Kalitesi &amp; Dağıtım:</strong> Google Play Console &amp; Apple App Store Connect (Xcode imzalama, TestFlight, Store Review), Codemagic CI/CD, Birim &amp; Widget Testleri (<code>flutter test</code>, <code>flutter analyze</code>), p50/p95 Gecikme Telemetrisi.</p>
-            <p><strong className="text-zinc-950">API, Backend &amp; Güvenlik:</strong> Supabase (PostgreSQL, RLS, Edge Functions / Deno, Anonim + OAuth Auth), Sunucu Tarafı Sır/Anahtar İzolasyonu, SHA-256 Önbellekleme (Cache), Paralel Çalışma Kilitleri (Work Leases), Atomik Ledger RPC &amp; Dağıtık Rate Limiting.</p>
-            <p><strong className="text-zinc-950">React, Next.js &amp; Web:</strong> Next.js 16 (App Router, SSR/SEO), React 19, TypeScript, Prisma ORM, PostgreSQL, NextAuth (<code>bcryptjs</code>, SHA-256 Token), Stripe Webhooks, Tailwind CSS.</p>
+          <div className="space-y-3 text-sm text-zinc-800 leading-relaxed">
+            <div className="p-3.5 rounded-lg bg-zinc-50 border border-zinc-200">
+              <p className="font-bold text-zinc-950 mb-0.5">Flutter &amp; Mobil Uygulama Geliştirme</p>
+              <p>Flutter, Dart, Riverpod (State Management), InAppWebView &amp; JavaScript Köprüsü (DOM Overlay Mimarisi), RevenueCat (IAP &amp; Abonelik Yönetimi), Google Mobile Ads (AdMob SSV), SharedPreferences &amp; Hive Yerel Depolama, Çoklu Dil / l10n (18 Dil &amp; RTL Desteği).</p>
+            </div>
+            <div className="p-3.5 rounded-lg bg-zinc-50 border border-zinc-200">
+              <p className="font-bold text-zinc-950 mb-0.5">Mobil Ürün Kalitesi, Test &amp; Mağaza Dağıtımı</p>
+              <p>Google Play Console &amp; Apple App Store Connect (Xcode İmzalama, TestFlight, Store Review Süreçleri), Codemagic CI/CD, Otomatik Birim &amp; Widget Testleri (<code>flutter test</code>, <code>flutter analyze</code> sıfır hata), İstemci Performans ve Gecikme Telemetrisi (p50/p95 ölçümü).</p>
+            </div>
+            <div className="p-3.5 rounded-lg bg-zinc-50 border border-zinc-200">
+              <p className="font-bold text-zinc-950 mb-0.5">API, Backend, Veritabanı &amp; Güvenlik Mimarisi</p>
+              <p>Supabase (PostgreSQL, Row Level Security / RLS, Edge Functions / Deno, Anonim Oturumdan OAuth/E-Posta Hesabına Yükseltme), Sunucu Tarafı Sır/Anahtar İzolasyonu, SHA-256 Görsel Önbellekleme (24s Cache), Paralel Çalışma Kilitleri (Work Leases), Değişmez Muhasebe Defteri (Immutable Ledger) RPC&apos;leri, Dağıtık Rate Limiting, HTTPS/SSRF Kontrolleri.</p>
+            </div>
+            <div className="p-3.5 rounded-lg bg-zinc-50 border border-zinc-200">
+              <p className="font-bold text-zinc-950 mb-0.5">React, Next.js &amp; Modern Web Geliştirme</p>
+              <p>Next.js 16 (App Router, Server-Side Rendering, Dinamik SEO), React 19, TypeScript (Tip Güvenli Geliştirme), Prisma ORM, PostgreSQL, NextAuth (<code>bcryptjs</code>, SHA-256 Token Özetleme), Stripe Abonelik &amp; Webhook Entegrasyonu, Tailwind CSS, Three.js (3D WebGL), Critters Kritik CSS &amp; Web Vitals.</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 4: Engineering Decisions & Architecture Cases */}
+        <section className="mb-8">
+          <h2 className="text-base font-bold uppercase tracking-wider text-zinc-950 border-b-2 border-zinc-300 pb-1.5 mb-3.5">
+            Öne Çıkan Mühendislik Kararları &amp; Mimari Çözümler
+          </h2>
+          <div className="space-y-3.5 text-sm text-zinc-700 leading-relaxed">
+            <div className="border-l-4 border-zinc-900 pl-3.5">
+              <p className="font-bold text-zinc-950">1. Kaynak Görseli Bozmadan Gerçek Zamanlı Çeviri Katmanı (MangaLens):</p>
+              <p>Sayfa görsellerini yeniden işleyip kalite ve hız kaybetmek yerine, <code>InAppWebView</code> üzerinde JavaScript köprüsüyle çalışan ayrık DOM overlay mimarisi kuruldu. Uzun dikey manga şeritleri görünür bölge öncelikli parçalara (tiling) bölünerek ilk çeviri katmanı görünme süresi (<code>time_to_first_translation_overlay_ms</code>) düşürüldü ve kaydırma/zoom sırasında koordinat senkronizasyonu korundu.</p>
+            </div>
+            <div className="border-l-4 border-cyan-600 pl-3.5">
+              <p className="font-bold text-zinc-950">2. AI API Maliyet Koruması ve İdempotent Kredi Muhasebesi (MangaLens):</p>
+              <p>Mobil istemciye hiçbir gizli anahtar gömülmeden tüm Gemini çağrıları Supabase Edge Functions arkasına alındı. Görsel URL&apos;nin SHA-256 özetiyle 24 saatlik önbellek ve paralel <code>translation_work_leases</code> kilitleri uygulanarak aynı sayfa için mükerrer LLM çağrıları engellendi. Başarısız çeviri isteklerinde kredi iadesi ve RevenueCat/AdMob SSV bakiye yüklemeleri atomik PostgreSQL RPC&apos;leriyle garanti altına alındı.</p>
+            </div>
+            <div className="border-l-4 border-violet-600 pl-3.5">
+              <p className="font-bold text-zinc-950">3. Kesintiye Dayanıklı (Fault-Tolerant) Hibrit Prompt Üretimi (ProPromptGen):</p>
+              <p>Harici LLM API gecikmeleri veya kota sınırlarında kullanıcı deneyiminin kesintiye uğramaması için <code>@google/generative-ai</code> çağrısının arkasına 50+ AI platformuna özel kural/şablon derleyici (fallback engine) ve PostgreSQL üzerinde serverless örnekler arası paylaşılan kalıcı <code>RateLimit</code> koruma katmanı eklendi.</p>
+            </div>
           </div>
         </section>
 
