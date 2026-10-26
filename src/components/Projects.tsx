@@ -15,6 +15,7 @@ function ProjectCard({ project }: { project: Project }) {
   const [rotateY, setRotateY] = useState(0);
   const [glarePos, setGlarePos] = useState({ x: 50, y: 50, opacity: 0 });
   const [showCode, setShowCode] = useState(false);
+  const [showCaseStudy, setShowCaseStudy] = useState(false);
   const [copied, setCopied] = useState(false);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -120,18 +121,59 @@ function ProjectCard({ project }: { project: Project }) {
           ))}
         </ul>
 
-        {/* Code Snippet Drawer (if exists) */}
-        {project.codeSnippet && (
-          <div className="pt-2">
-            <button
-              onClick={() => setShowCode(!showCode)}
-              className="flex items-center gap-1.5 text-xs font-mono text-cyan-400 hover:text-cyan-300 transition-colors"
-            >
-              <Code2 className="w-3.5 h-3.5" />
-              <span>{showCode ? "Kod Önizlemesini Gizle" : "Örnek Kodu İncele"}</span>
-            </button>
+        {/* Code Snippet & Case Study Drawers */}
+        {(project.codeSnippet || project.caseStudy) && (
+          <div className="pt-2 space-y-2">
+            <div className="flex flex-wrap items-center gap-3">
+              {project.caseStudy && (
+                <button
+                  onClick={() => {
+                    setShowCaseStudy(!showCaseStudy);
+                    if (!showCaseStudy) setShowCode(false);
+                  }}
+                  className="inline-flex items-center gap-1.5 text-xs font-mono px-2.5 py-1 rounded-lg bg-cyan-950/70 hover:bg-cyan-900/80 border border-cyan-500/40 text-cyan-300 transition-colors"
+                >
+                  <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
+                  <span>{showCaseStudy ? "Mimari Vakayı Gizle" : "Mimari & Teknik Vaka"}</span>
+                </button>
+              )}
 
-            {showCode && (
+              {project.codeSnippet && (
+                <button
+                  onClick={() => {
+                    setShowCode(!showCode);
+                    if (!showCode) setShowCaseStudy(false);
+                  }}
+                  className="inline-flex items-center gap-1.5 text-xs font-mono px-2.5 py-1 rounded-lg bg-zinc-800/80 hover:bg-zinc-700/80 border border-zinc-700 text-zinc-300 hover:text-cyan-300 transition-colors"
+                >
+                  <Code2 className="w-3.5 h-3.5 text-cyan-400" />
+                  <span>{showCode ? "Kod Önizlemesini Gizle" : "Örnek Kodu İncele"}</span>
+                </button>
+              )}
+            </div>
+
+            {showCaseStudy && project.caseStudy && (
+              <div className="mt-2 rounded-xl bg-black/80 border border-cyan-500/30 p-3.5 text-xs space-y-2.5 text-zinc-300">
+                <div>
+                  <span className="font-mono font-bold text-cyan-400 block text-[11px] uppercase tracking-wider">1. Çözülen Zorluk (Problem)</span>
+                  <p className="text-zinc-300 mt-0.5 leading-relaxed">{project.caseStudy.problem}</p>
+                </div>
+                <div>
+                  <span className="font-mono font-bold text-violet-400 block text-[11px] uppercase tracking-wider">2. Mimari Karar & Veri Akışı</span>
+                  <p className="text-zinc-300 mt-0.5 leading-relaxed">{project.caseStudy.architecture}</p>
+                </div>
+                <div>
+                  <span className="font-mono font-bold text-amber-400 block text-[11px] uppercase tracking-wider">3. Yazılım Testi & Güvenlik Doğrulaması</span>
+                  <p className="text-zinc-300 mt-0.5 leading-relaxed">{project.caseStudy.testing}</p>
+                </div>
+                <div>
+                  <span className="font-mono font-bold text-emerald-400 block text-[11px] uppercase tracking-wider">4. Teknik Sonuç</span>
+                  <p className="text-zinc-300 mt-0.5 leading-relaxed">{project.caseStudy.outcome}</p>
+                </div>
+              </div>
+            )}
+
+            {showCode && project.codeSnippet && (
               <div className="mt-2 relative rounded-xl bg-black/80 border border-zinc-800 p-3 text-[11px] font-mono text-zinc-300 overflow-x-auto">
                 <button
                   onClick={handleCopyCode}

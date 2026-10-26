@@ -1,3 +1,10 @@
+export interface CaseStudy {
+  problem: string;
+  architecture: string;
+  testing: string;
+  outcome: string;
+}
+
 export interface Project {
   id: string;
   title: string;
@@ -11,6 +18,7 @@ export interface Project {
   appStoreUrl?: string;
   featured: boolean;
   codeSnippet?: string;
+  caseStudy?: CaseStudy;
   badge?: string;
 }
 
@@ -115,7 +123,13 @@ final result = await supabase.functions.invoke('translate-page', body: {
   'imageUrl': pageUrl,
   'imageHash': sha256.convert(utf8.encode(cleanUrl)).toString(),
   'targetLang': selectedLangCode,
-});`
+});`,
+      caseStudy: {
+        problem: "Uzun dikey manga şeritlerindeki konuşma balonlarını orijinal görseli bozmadan düşük gecikmeyle çevirmek ve aynı sayfa için tekrarlayan Gemini API maliyetini önlemek.",
+        architecture: "InAppWebView üzerinde JS köprüsüyle çalışan ayrık DOM overlay mimarisi kuruldu. Uzun görseller görünür bölge öncelikli parçalara (tiling) bölündü; tüm AI çağrıları Supabase Edge Functions arkasına alınarak URL SHA-256 önbelleği (24s) ve paralel çalışma kilitleri (translation_work_leases) uygulandı.",
+        testing: "16 otomatik birim/widget testi (credit_account_test, translation_block_test, translation_overlay_preferences_test vb.), flutter analyze sıfır hata kontrolü, SSRF/HTTPS doğrulaması ve p50/p95 istemci gecikme telemetrisi.",
+        outcome: "API anahtarları istemciden %100 izole edildi, önbellek ve lease kilitleriyle mükerrer LLM maliyeti engellendi; hata anında atomik PostgreSQL ledger RPC'leriyle otomatik kredi iadesi garanti altına alındı."
+      }
     },
     {
       id: "propromptgen",
@@ -140,7 +154,13 @@ export async function generateOptimizedPrompt(input: PromptRequest) {
   } catch {
     return compileRuleBasedTemplate(input.rawPrompt, input.platform, input.category);
   }
-}`
+}`,
+      caseStudy: {
+        problem: "50+ farklı AI modelinin parametre kurallarını 9 dilde desteklemek ve harici LLM API kesintilerinde veya aşırı isteklerde servisin durmasını engellemek.",
+        architecture: "Next.js App Router üzerinde @google/generative-ai (Gemini API) ile kural/şablon tabanlı derleyiciyi birleştiren hibrit motor kuruldu. Serverless örnekler arasında paylaşılan PostgreSQL tabanlı RateLimit tablosu ve JSON çok dilli çeviri şeması tasarlandı.",
+        testing: "NextAuth üzerinde bcryptjs şifreleme ve ham token yerine SHA-256 özeti saklayan şifre sıfırlama akışı, Stripe webhook imza doğrulaması, Critters kritik CSS ve Web Vitals performans takibi.",
+        outcome: "API kesintilerinde dahi kural tabanlı fallback ile kesintisiz prompt üretimi sağlandı; 9 dilde dinamik SSR rotalarıyla arama motoru indekslemesi ve güvenli SaaS abonelik döngüsü tamamlandı."
+      }
     },
     {
       id: "astranova",
@@ -173,7 +193,13 @@ class AstraNovaEngine {
       ascendant: ZodiacMapper.fromLongitude(ascendantDeg),
     );
   }
-}`
+}`,
+      caseStudy: {
+        problem: "Statik burç metinleri yerine kullanıcının gerçek doğum tarihi, saati ve coğrafi koordinatlarına dayalı astronomik harita hesaplamak ve kişiselleştirilmiş AI yorumları üretmek.",
+        architecture: "Julian Day ve yerel yıldız zamanı (Sidereal Time) üzerinden Güneş/Ay/Yükselen ve ev yerleşimlerini hesaplayan efemeris motoru yazıldı; Firebase üzerinden Google Gemini API'ye kullanıcının natal harita parametreleri bağlam olarak aktarılarak 'Kahin' AI danışmanı ve çift harita sinastri analizi kurgulandı.",
+        testing: "Farklı zaman dilimleri ve enlem/boylam uç değerleri için doğum haritası hesaplama doğrulaması, çevrimdışı profil saklama (Hive/SharedPreferences) ve 9 dilde yerel arayüz kontrolü.",
+        outcome: "Temel doğum haritası ve profil verileri internet bağlantısı gerektirmeden cihazda anlık hesaplanıp saklanırken, AI danışman ve sinastri modülleriyle kişiye özel dinamik içerik üretimi sağlandı."
+      }
     },
     {
       id: "esnaf-lokanta",
@@ -187,7 +213,13 @@ class AstraNovaEngine {
         "Çoklu teslimat adresi tanımlama, sipariş durumu takibi ve POS/Nakit ödeme tercihi akışı"
       ],
       githubUrl: "https://github.com/luxiq213",
-      featured: false
+      featured: false,
+      caseStudy: {
+        problem: "Günlük değişen yemek menülerini, kurumsal tabldot paketlerini ve onaylı müşteri siparişlerini tek bir ilişkisel veritabanı şemasında yönetmek.",
+        architecture: "Next.js App Router ve Prisma ORM üzerinde User (admin/customer + isApproved), Product (isDailyMenu + stok), Order (JSON tabldots + POS/Nakit) ve çoklu Address tablolarıyla ilişkisel PostgreSQL mimarisi kuruldu.",
+        testing: "Rol bazlı rota koruması, stok düşümü, servis açık/kapalı (Setting.isServiceOpen) durum kontrolleri ve bcryptjs parola doğrulaması.",
+        outcome: "İşletmenin günlük menü ve tabldot siparişlerini kağıt/telefon trafiği olmadan onaylı müşteriler üzerinden dijital olarak yönetebildiği tam kapsamlı sipariş akışı tamamlandı."
+      }
     }
   ] as Project[],
 

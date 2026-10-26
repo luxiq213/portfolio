@@ -114,7 +114,7 @@ export default function InteractiveTerminal() {
             <p className="text-cyan-400 font-bold">İletişim Kanalları:</p>
             <p>E-posta: <span className="text-white">{PORTFOLIO_DATA.personal.email}</span></p>
             <p>GitHub: <a href={PORTFOLIO_DATA.personal.github} target="_blank" rel="noreferrer" className="text-cyan-400 underline">{PORTFOLIO_DATA.personal.github}</a></p>
-            <p>LinkedIn: <a href={PORTFOLIO_DATA.personal.linkedin} target="_blank" rel="noreferrer" className="text-violet-400 underline">{PORTFOLIO_DATA.personal.linkedin}</a></p>
+            <p>CV &amp; Mimari Vakalar: <a href={PORTFOLIO_DATA.personal.cvViewUrl} className="text-violet-400 underline">{PORTFOLIO_DATA.personal.cvViewUrl}</a></p>
           </div>
         );
         break;

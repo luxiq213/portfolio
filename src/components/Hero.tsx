@@ -142,15 +142,6 @@ export default function Hero() {
               <GithubIcon className="w-4 h-4" />
             </a>
             <a
-              href={PORTFOLIO_DATA.personal.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 rounded-lg bg-zinc-900/60 hover:text-cyan-400 hover:bg-zinc-800 border border-zinc-800 transition-colors"
-              aria-label="LinkedIn"
-            >
-              <LinkedinIcon className="w-4 h-4" />
-            </a>
-            <a
               href="#contact"
               className="p-2 rounded-lg bg-zinc-900/60 hover:text-cyan-400 hover:bg-zinc-800 border border-zinc-800 transition-colors"
               aria-label="E-posta İletişim"

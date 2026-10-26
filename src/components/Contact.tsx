@@ -91,20 +91,18 @@ export default function Contact() {
                   <GithubIcon className="w-4 h-4 text-white" />
                   <span>GitHub Profilim</span>
                 </div>
-                <span className="text-xs font-mono text-cyan-400">@profil →</span>
+                <span className="text-xs font-mono text-cyan-400">@luxiq213 →</span>
               </a>
 
               <a
-                href={PORTFOLIO_DATA.personal.linkedin}
-                target="_blank"
-                rel="noreferrer"
+                href={PORTFOLIO_DATA.personal.cvViewUrl}
                 className="flex items-center justify-between p-3 rounded-xl bg-zinc-800/40 hover:bg-zinc-800 border border-zinc-700/50 text-xs sm:text-sm text-zinc-200 transition-colors"
               >
                 <div className="flex items-center gap-2.5">
-                  <LinkedinIcon className="w-4 h-4 text-violet-400" />
-                  <span>LinkedIn Profilim</span>
+                  <Sparkles className="w-4 h-4 text-violet-400" />
+                  <span>Detaylı CV &amp; Mimari Vakalar</span>
                 </div>
-                <span className="text-xs font-mono text-violet-400">@profil →</span>
+                <span className="text-xs font-mono text-violet-400">/cv →</span>
               </a>
             </div>
           </div>
