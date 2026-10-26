@@ -84,10 +84,10 @@ export default function InteractiveTerminal() {
           <div className="space-y-2 text-xs font-mono">
             <p className="text-violet-400 font-bold">=== GELİŞTİRİCİ YETENEKLERİ ===</p>
             <div className="space-y-1 text-zinc-300">
-              <p><span className="text-cyan-400">[Backend & C#]:</span> C# (.NET Core), ASP.NET Web API, OOP, Katmanlı Mimari</p>
-              <p><span className="text-cyan-400">[Veritabanı & SQL]:</span> MS SQL Server (T-SQL), MySQL, Entity Framework, Prisma, İlişkisel Modelleme</p>
-              <p><span className="text-cyan-400">[Web & Frontend]:</span> React, Next.js, TypeScript, Three.js (WebGL), Tailwind CSS</p>
-              <p><span className="text-cyan-400">[Araçlar]:</span> Git, GitHub, Visual Studio, VS Code, Postman, Vercel</p>
+              <p><span className="text-cyan-400">[Mobil & Flutter]:</span> Flutter, Dart, iOS & Android, Bloc/Riverpod, ML Kit OCR, CachedNetworkImage, Hive</p>
+              <p><span className="text-cyan-400">[Yapay Zeka & LLM]:</span> Gemini / OpenAI / Claude API, OCR + LLM Bağlamsal Çeviri Hattı, Structured JSON Prompts</p>
+              <p><span className="text-cyan-400">[Web & React]:</span> React.js, Next.js (App Router, SSR), TypeScript, Three.js (WebGL), Tailwind CSS</p>
+              <p><span className="text-cyan-400">[Ağ & Backend]:</span> Asenkron RESTful API (Dio Interceptors, JWT), Firebase, PostgreSQL/MSSQL, Prisma ORM</p>
             </div>
           </div>
         );

@@ -5,22 +5,23 @@ import Footer from "@/components/Footer";
 import ThreeBackground from "@/components/3d/ThreeBackground";
 
 export const metadata: Metadata = {
-  title: "Bilgisayar Programcısı & Yazılım Geliştirici | Three.js 3D Portföy",
-  description: "Bilgisayar Programcılığı mezunu, C#, SQL Server, .NET, Next.js, React ve Three.js WebGL teknolojileriyle geliştirilmiş interaktif 3D portföy.",
+  title: "Mehmet Cömert | Mobil (Flutter), React & Yapay Zeka (AI) Geliştirici",
+  description: "Ondokuz Mayıs Üniversitesi Bilgisayar Programcılığı mezunu. Flutter & Dart (iOS & Android), OCR & LLM API entegrasyonları, React, Next.js ve Three.js WebGL portföyü.",
   keywords: [
-    "Bilgisayar Programcılığı",
-    "Yazılım Geliştirici",
-    "C# Developer",
-    "MS SQL Server",
-    "Next.js",
-    "Three.js",
+    "Mehmet Cömert",
+    "Flutter Developer",
+    "Mobil Uygulama Geliştirici",
     "React",
-    "Vercel Portfolio"
+    "Next.js",
+    "LLM & OCR Entegrasyonu",
+    "Three.js",
+    "MangaLens",
+    "ProPromptGen"
   ],
-  authors: [{ name: "Mehmet" }],
+  authors: [{ name: "Mehmet Cömert" }],
   openGraph: {
-    title: "Bilgisayar Programcısı & Yazılım Geliştirici | 3D Portföy",
-    description: "Three.js destekli, C# ve SQL projelerini sergileyen 3D interaktif portföy sitesi.",
+    title: "Mehmet Cömert | Mobil (Flutter), React & AI Geliştirici | 3D Portföy",
+    description: "Google Play ve App Store'da canlı uygulamaları bulunan Flutter, React & Yapay Zeka odaklı yazılım geliştirici portföyü.",
     type: "website"
   }
 };

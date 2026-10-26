@@ -78,24 +78,24 @@ export default function Hero() {
 
           {/* Short Bio */}
           <p className="text-zinc-400 text-base sm:text-lg leading-relaxed max-w-2xl font-sans">
-            Bilgisayar Programcılığı eğitimim boyunca nesne yönelimli programlama (<span className="text-cyan-300 font-medium">C# & .NET</span>), 
-            ilişkisel veritabanı mimarisi (<span className="text-cyan-300 font-medium">MS SQL & T-SQL</span>) ve modern web (<span className="text-cyan-300 font-medium">Next.js & Three.js</span>) 
-            üzerine pratik çözümler ürettim. Temiz kod ve yüksek performans odaklı çalışıyorum.
+            Tek kod tabanından <span className="text-cyan-300 font-medium">Flutter & Dart</span> ile Google Play ve App Store&apos;da canlı yayında olan mobil uygulamalar,{" "}
+            <span className="text-cyan-300 font-medium">OCR & çok modlu LLM API</span> boru hatları ve{" "}
+            <span className="text-cyan-300 font-medium">React / Next.js</span> tabanlı modern web platformları geliştiriyorum.
           </p>
 
           {/* Quick Metrics / Badges */}
           <div className="grid grid-cols-3 gap-3 py-2 max-w-lg">
             <div className="p-3 rounded-xl bg-zinc-900/50 border border-zinc-800/80 backdrop-blur-sm">
-              <div className="text-xl sm:text-2xl font-bold text-cyan-400 font-mono">Ön Lisans</div>
-              <div className="text-xs text-zinc-400">Bilgisayar Programcılığı</div>
+              <div className="text-xl sm:text-2xl font-bold text-cyan-400 font-mono">iOS & Android</div>
+              <div className="text-xs text-zinc-400">Canlı Mağaza Ürünleri</div>
             </div>
             <div className="p-3 rounded-xl bg-zinc-900/50 border border-zinc-800/80 backdrop-blur-sm">
-              <div className="text-xl sm:text-2xl font-bold text-violet-400 font-mono">15+</div>
-              <div className="text-xs text-zinc-400">Teknoloji & Araç</div>
+              <div className="text-xl sm:text-2xl font-bold text-violet-400 font-mono">AI & OCR</div>
+              <div className="text-xs text-zinc-400">LLM & Vision Boru Hattı</div>
             </div>
             <div className="p-3 rounded-xl bg-zinc-900/50 border border-zinc-800/80 backdrop-blur-sm">
-              <div className="text-xl sm:text-2xl font-bold text-emerald-400 font-mono">Vercel</div>
-              <div className="text-xs text-zinc-400">Yayına Hazır</div>
+              <div className="text-xl sm:text-2xl font-bold text-emerald-400 font-mono">React / Next</div>
+              <div className="text-xs text-zinc-400">SSR & WebGL Mimarisi</div>
             </div>
           </div>
 

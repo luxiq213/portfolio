@@ -7,30 +7,30 @@ import { PORTFOLIO_DATA } from "@/data/portfolioData";
 export default function About() {
   const pillars = [
     {
-      title: "Nesne Yönelimli Programlama (OOP)",
-      description: "C# ve modern programlama dilleriyle SOLID prensiplerine uygun, katmanlı (N-Tier) ve sürdürülebilir kod mimarileri kuruyorum.",
+      title: "Cross-Platform Mobil (Flutter & Dart)",
+      description: "Tek kod tabanından iOS (App Store) ve Android (Google Play) için 60 FPS akıcılıkta, reaktif durum yönetimli (Bloc/Riverpod) canlı uygulamalar geliştiriyorum.",
       icon: Code2,
       color: "from-cyan-500 to-blue-600",
       accent: "text-cyan-400"
     },
     {
-      title: "Veritabanı Mimarisi & SQL",
-      description: "MS SQL Server ve MySQL ile ilişkisel veritabanı şemaları (ERD), Stored Procedure'ler, Trigger'lar ve indeks optimizasyonu tasarlıyorum.",
-      icon: Database,
+      title: "OCR, Görüntü İşleme & LLM Boru Hatları",
+      description: "Google ML Kit / Vision OCR ile metin bölgesi (bounding-box) tespiti yapıyor, çok modlu LLM API'leri (Gemini, OpenAI, Claude) ile bağlamsal çeviri ve yapılandırılmış çıktılar üretiyorum.",
+      icon: Cpu,
       color: "from-blue-600 to-violet-600",
       accent: "text-blue-400"
     },
     {
-      title: "Modern Web & API Geliştirme",
-      description: "Next.js, React ve Tailwind CSS ile yüksek performanslı, mobil duyarlı ve Three.js destekli interaktif web deneyimleri inşa ediyorum.",
+      title: "Modern Web & React Ekosistemi",
+      description: "React, Next.js (App Router & SSR), TypeScript ve Tailwind CSS ile tip güvenli, SEO uyumlu ve Three.js WebGL destekli web platformları inşa ediyorum.",
       icon: Globe,
       color: "from-violet-600 to-fuchsia-600",
       accent: "text-violet-400"
     },
     {
-      title: "Hızlı Adaptasyon & Problem Çözme",
-      description: "Bilgisayar programcılığı formasyonuyla yeni bir dil, framework veya kütüphaneyi çok hızlı kavrayıp projeye adapte edebiliyorum.",
-      icon: Cpu,
+      title: "Asenkron Ağ & Veri Katmanı",
+      description: "Dio/HTTP interceptor yapıları, JSON serileştirme, yerel önbellekleme (Hive/SharedPreferences, CachedNetworkImage) ve ilişkisel SQL/Prisma şemaları kurguluyorum.",
+      icon: Database,
       color: "from-emerald-500 to-cyan-600",
       accent: "text-emerald-400"
     }
@@ -71,27 +71,27 @@ export default function About() {
             </div>
 
             <p className="text-zinc-300 text-sm sm:text-base leading-relaxed">
-              Bilgisayar Programcılığı eğitimim süresince temel algoritmaları, bellek yönetimini ve veri yapılarını özümsedim. 
-              Okul süreci ve sonrasındaki projelerimde <strong className="text-white">C# ile katmanlı mimariler</strong> ve <strong className="text-white">SQL Server ile ilişkisel veri modelleme</strong> üzerinde yoğunlaştım.
+              Ondokuz Mayıs Üniversitesi Bilgisayar Programcılığı eğitimim süresince algoritma tasarımını, veri yapılarını ve nesne yönelimli programlamayı özümsedim. 
+              Mezuniyetimle birlikte odağımı <strong className="text-white">Flutter & Dart ile cross-platform mobil ürünlere</strong> ve <strong className="text-white">OCR + LLM tabanlı yapay zeka entegrasyonlarına</strong> taşıdım.
             </p>
 
             <p className="text-zinc-400 text-sm leading-relaxed">
-              Aynı zamanda günümüzün hızlı değişen web dünyasında <strong className="text-cyan-300">React, Next.js ve Three.js</strong> gibi modern teknolojileri projelerime katarak hem güçlü bir backend mantığı hem de göz alıcı kullanıcı deneyimleri oluşturmayı hedefliyorum.
+              Hem Google Play Store hem de Apple App Store&apos;da canlı kullanıcıya ulaşan uygulamalar (<strong className="text-cyan-300">MangaLens: Manga Çeviri, AstraNova: Astroloji & Burç</strong>) yayınlarken, web tarafında <strong className="text-cyan-300">React, Next.js ve TypeScript</strong> ile modern yapay zeka araçları (<strong className="text-cyan-300">propromptgen.com</strong>) geliştiriyorum.
             </p>
           </div>
 
           <div className="pt-6 mt-6 border-t border-zinc-800/80 space-y-2">
             <div className="flex items-center gap-2 text-xs text-zinc-300 font-mono">
               <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-              <span>Sıfırdan uçtan uca proje geliştirme pratiği</span>
+              <span>Google Play & App Store uçtan uca yayın ve mağaza yönetimi</span>
             </div>
             <div className="flex items-center gap-2 text-xs text-zinc-300 font-mono">
               <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-              <span>İlişkisel veritabanı optimizasyonu ve sorgu tasarımı</span>
+              <span>OCR (ML Kit / Vision) ve çok modlu LLM API boru hatları</span>
             </div>
             <div className="flex items-center gap-2 text-xs text-zinc-300 font-mono">
               <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-              <span>Git & GitHub ile ekip çalışmasına tam uyum</span>
+              <span>React, Next.js (App Router) & TypeScript ile modern web mimarisi</span>
             </div>
           </div>
         </div>

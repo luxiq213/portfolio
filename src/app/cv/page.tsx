@@ -58,14 +58,17 @@ export default function CvPage() {
               <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-zinc-950 uppercase">
                 {PORTFOLIO_DATA.personal.fullName}
               </h1>
-              <p className="text-base sm:text-lg font-semibold text-cyan-700 mt-1">
-                Mobil (Flutter), React & Yapay Zeka (AI) Odaklı Yazılım Geliştirici
+              <p className="text-base sm:text-lg font-bold text-cyan-700 mt-1">
+                Flutter / Dart Developer | Android &amp; iOS App Publishing
+              </p>
+              <p className="text-xs sm:text-sm font-medium text-zinc-600">
+                React / Next.js • Ürün Geliştirme, AI Entegrasyonu ve Mağaza Dağıtımı Deneyimi
               </p>
             </div>
           </div>
 
           {/* Contact Bar */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 mt-5 text-xs text-zinc-700">
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2 mt-5 text-xs text-zinc-700">
             <div className="flex items-center gap-1.5">
               <Phone className="w-3.5 h-3.5 text-zinc-900 shrink-0" />
               <span>{PORTFOLIO_DATA.personal.phoneFormatted}</span>
@@ -84,53 +87,38 @@ export default function CvPage() {
                 github.com/luxiq213
               </a>
             </div>
+            <div className="flex items-center gap-1.5">
+              <Globe className="w-3.5 h-3.5 text-cyan-700 shrink-0" />
+              <span className="font-semibold text-zinc-900">3D Portföy:</span>
+              <a
+                href="https://portfolio-fyi0li9cq-luxiq213s-projects.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
+                className="text-cyan-700 underline hover:text-cyan-900 font-mono text-[11px]"
+              >
+                portfolio-fyi0li9cq-luxiq213s-projects.vercel.app
+              </a>
+            </div>
           </div>
         </header>
 
         {/* Section 1: Professional Summary */}
         <section className="mb-6">
           <h2 className="text-sm font-bold uppercase tracking-wider text-zinc-950 border-b border-zinc-300 pb-1 mb-2.5">
-            Özet & Profil
+            Profil
           </h2>
           <p className="text-xs sm:text-sm text-zinc-700 leading-relaxed text-justify">
-            Ondokuz Mayıs Üniversitesi Bilgisayar Programcılığı mezunuyum. Özellikle <strong>Flutter & Dart</strong> kullanarak hem 
-            <strong> Google Play Store</strong> hem de <strong>Apple App Store</strong> üzerinde aktif ve canlı yayında olan mobil uygulamalar (MangaLens, Astro Yapıcı) 
-            geliştirdim. Web tarafında <strong>React ekosistemine derin bir ilgi duyuyor</strong> ve modern kullanıcı deneyimleri üretiyorum. 
-            Aynı zamanda <strong>hızla gelişen Yapay Zeka (AI) ve LLM dünyasını aktif olarak takip eden</strong>, yapay zeka araçlarını ve istem mühendisliğini (Prompt Engineering) 
-            projelerine (propromptgen.com) ve geliştirme süreçlerine entegre eden vizyoner bir yazılımcıyım. 
-            Temiz kod, performans ve son kullanıcı odaklı çalışma disiplinine sahibim.
+            Ondokuz Mayıs Üniversitesi Bilgisayar Programcılığı mezunu, <strong>Flutter ve Dart</strong> ile Android ve iOS uygulamaları geliştiren yazılım geliştirici. 
+            <strong> MangaLens: Manga Çeviri</strong> uygulamasını her iki mobil mağazada (Google Play ve App Store) uçtan uca yayımlama sürecini tamamladı; 
+            <strong> AstraNova: Astroloji &amp; Burç</strong> mobil uygulaması ve <strong>Next.js / TypeScript</strong> ile geliştirilen <strong>ProPromptGen</strong> web ürünü üzerinde çalıştı. 
+            Mobil arayüz mimarisi, güvenli API/LLM entegrasyonu, uygulama içi satın alma (IAP) ve kullanıcı odaklı ürün geliştirmeye odaklanıyor.
           </p>
         </section>
 
-        {/* Section 2: Technical Skills */}
-        <section className="mb-6">
-          <h2 className="text-sm font-bold uppercase tracking-wider text-zinc-950 border-b border-zinc-300 pb-1 mb-2.5">
-            Teknik Yetenekler
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-zinc-800">
-            <div>
-              <p className="font-bold text-zinc-950">Mobil Geliştirme (Flutter):</p>
-              <p className="text-zinc-700">Flutter, Dart, Cross-Platform (Android & iOS), State Management (Bloc / Provider / Riverpod), UI/UX Tasarımı, Cihaz API&apos;leri, Google Play Console & App Store Connect.</p>
-            </div>
-            <div>
-              <p className="font-bold text-zinc-950">Web & React Ekosistemi:</p>
-              <p className="text-zinc-700">React.js (Yüksek İlgi & Pratik), Next.js 15+, TypeScript, JavaScript, Tailwind CSS, Three.js WebGL, HTML5/CSS3.</p>
-            </div>
-            <div>
-              <p className="font-bold text-zinc-950">Yapay Zeka (AI) & İstem Mühendisliği:</p>
-              <p className="text-zinc-700">Aktif AI & LLM Takibi, Prompt Engineering, AI API Entegrasyonları (LLM / Vision), Yapay Zeka Destekli Geliştirme Araçları.</p>
-            </div>
-            <div>
-              <p className="font-bold text-zinc-950">Backend, Veritabanı & Araçlar:</p>
-              <p className="text-zinc-700">RESTful API Entegrasyonu, Firebase (Auth, Firestore), SQL (MySQL, MS SQL, PostgreSQL), Prisma ORM, Git & GitHub, Postman, Vercel.</p>
-            </div>
-          </div>
-        </section>
-
-        {/* Section 3: Live Projects & Applications */}
+        {/* Section 2: Selected Products & Live Applications (Moved to top 1/3 per audit) */}
         <section className="mb-6">
           <h2 className="text-sm font-bold uppercase tracking-wider text-zinc-950 border-b border-zinc-300 pb-1 mb-3">
-            Canlı Projeler & Yayınlanan Uygulamalar
+            Seçili Ürünler &amp; Yayınlanan Uygulamalar
           </h2>
 
           <div className="space-y-4">
@@ -138,22 +126,27 @@ export default function CvPage() {
             <div className="border-l-2 border-cyan-600 pl-3">
               <div className="flex flex-wrap items-center justify-between gap-1">
                 <h3 className="text-xs sm:text-sm font-bold text-zinc-950">
-                  MangaLens - Mobil Uygulama (Android & iOS)
+                  MangaLens: Manga Çeviri — Android &amp; iOS Mobil Uygulama
                 </h3>
                 <span className="text-[11px] font-mono text-cyan-800 font-semibold bg-cyan-50 px-2 py-0.5 rounded border border-cyan-200">
-                  Google Play & App Store Canlı
+                  Google Play &amp; App Store Yayında
                 </span>
               </div>
               <p className="text-[11px] font-mono text-zinc-600 mt-0.5">
-                Kullanılan Teknolojiler: Flutter, Dart, Cross-Platform, Google Play Store, Apple App Store, REST API
+                Kullanılan Teknolojiler: Flutter, Dart, Riverpod, InAppWebView (JS Bridge), Supabase Edge Functions, Gemini 3.5 Flash Vision, RevenueCat IAP, AdMob SSV
               </p>
               <ul className="list-disc list-inside text-xs text-zinc-700 mt-1.5 space-y-0.5">
-                <li>Flutter ile hem iOS hem Android ekosistemine tek kod tabanından (single codebase) derlendi ve mağazalarda yayınlandı.</li>
-                <li>Görsel işleme, akıcı sayfa gezintisi ve mobil performans optimizasyonu sağlandı.</li>
-                <li>Google Play Console ve App Store Connect mağaza test ve onay süreçleri sıfırdan başarıyla yönetildi.</li>
+                <li><strong>Ayrık Çeviri Katmanı &amp; Özelleştirme:</strong> Flutter/Dart ile geliştirilen MangaLens&apos;i Android ve iOS mağazalarında yayımladım. <code>InAppWebView</code> ve JS köprüsüyle kaynak görseli bozmadan görünür bölge öncelikli parçalama (tiling), kaydırma/zoom senkronlu DOM overlay katmanı ve cihazda/bulutta saklanan çeviri kutusu özelleştirmesi (font, boyut, opaklık, renk, kenarlık) işlevlerini hayata geçirdim.</li>
+                <li><strong>AI Çeviri, Maliyet &amp; Güvenlik:</strong> Supabase Edge Functions (<code>translate-page</code>) üzerinde <code>gemini-3.5-flash</code> multimodal vision ile 104 hedef dile yapılandırılmış JSON çevirisi kurguladım; API anahtarlarını sunucuda izole edip görsel URL&apos;nin SHA-256 özetiyle 24 saatlik önbellek ve çalışma kilitleri (<code>translation_work_leases</code>) uygulayarak mükerrer AI çağrı maliyetini önledim.</li>
+                <li><strong>IAP, Kredi &amp; Test Doğrulaması:</strong> RevenueCat webhook&apos;larıyla idempotent <code>LENS</code> kredi paketleri ve Plus/Pro abonelikleri, hata anında otomatik iade yapan değişmez ledger RPC&apos;leri ve AdMob SSV imzalı ödüllü reklam akışını geliştirdim; 16 otomatik birim/widget testi (<code>flutter test</code>, <code>flutter analyze</code> sıfır hata) ve p50/p95 gecikme telemetrisi uyguladım.</li>
               </ul>
-              <div className="mt-1 text-[11px] text-zinc-600 font-mono">
-                Google Play: <a href="https://play.google.com/store/apps/details?id=com.mangalens.app" target="_blank" rel="noreferrer" className="text-cyan-700 underline">play.google.com/store/apps/details?id=com.mangalens.app</a>
+              <div className="mt-1 text-[11px] text-zinc-600 font-mono space-y-0.5">
+                <div>
+                  Google Play: <a href="https://play.google.com/store/apps/details?id=com.mangalens.app" target="_blank" rel="noreferrer" className="text-cyan-700 underline">play.google.com/store/apps/details?id=com.mangalens.app</a>
+                </div>
+                <div>
+                  App Store: <a href="https://apps.apple.com/tr/app/mangalens-manga-%C3%A7eviri/id6793662351?l=tr" target="_blank" rel="noreferrer" className="text-cyan-700 underline">apps.apple.com/tr/app/mangalens-manga-çeviri/id6793662351</a>
+                </div>
               </div>
             </div>
 
@@ -161,45 +154,58 @@ export default function CvPage() {
             <div className="border-l-2 border-violet-600 pl-3">
               <div className="flex flex-wrap items-center justify-between gap-1">
                 <h3 className="text-xs sm:text-sm font-bold text-zinc-950">
-                  ProPromptGen - Yapay Zeka & İstem Platformu
+                  ProPromptGen — Çok Dilli AI Prompt &amp; Topluluk Web Ürünü
                 </h3>
                 <span className="text-[11px] font-mono text-violet-800 font-semibold bg-violet-50 px-2 py-0.5 rounded border border-violet-200">
-                  propromptgen.com Canlı
+                  propromptgen.com Yayında
                 </span>
               </div>
               <p className="text-[11px] font-mono text-zinc-600 mt-0.5">
-                Kullanılan Teknolojiler: React, Next.js, TypeScript, Tailwind CSS, AI Prompt Engineering, Vercel
+                Kullanılan Teknolojiler: Next.js 16 (App Router, SSR), React 19, TypeScript, Google Gemini API, Prisma ORM, PostgreSQL, NextAuth, Stripe
               </p>
               <ul className="list-disc list-inside text-xs text-zinc-700 mt-1.5 space-y-0.5">
-                <li>Yapay zeka modelleri için optimize edilmiş prompt üretimi sağlayan canlı web platformu.</li>
-                <li>React mimarisi, dinamik parametreleme sistemi, yüksek hızlı kopyalama ve kullanıcı dostu arayüz tasarlandı.</li>
+                <li><strong>Hibrit Prompt Motoru &amp; Çok Dilli Yapı:</strong> Next.js ve TypeScript ile kullanıcı girdisini <code>@google/generative-ai</code> (Gemini API) veya kesinti anında devreye giren kural/şablon fallback mekanizmasıyla 50+ AI platformuna uygun yapılandırılmış promptlara dönüştüren, route tabanlı 9 dil (<code>tr, en, de, fr, es, it, pt, ru, ja</code>) destekli web ürünü geliştirdim.</li>
+                <li><strong>Veritabanı, Güvenlik &amp; Abonelik:</strong> Prisma ve PostgreSQL üzerinde çok dilli prompt çevirileri (JSON), topluluk etkileşimleri (beğeni, iç içe yorum, yer imi, takip, bildirim) ve serverless örnekler arası kalıcı <code>RateLimit</code> tablosunu tasarladım; NextAuth (<code>bcryptjs</code> + SHA-256 şifre sıfırlama) ve Stripe aylık/yıllık Premium abonelik akışlarını entegre ettim.</li>
               </ul>
               <div className="mt-1 text-[11px] text-zinc-600 font-mono">
                 Canlı Bağlantı: <a href="https://propromptgen.com" target="_blank" rel="noreferrer" className="text-violet-700 underline">https://propromptgen.com</a>
               </div>
             </div>
 
-            {/* Project 3: Astro Yapıcı */}
+            {/* Project 3: AstraNova */}
             <div className="border-l-2 border-emerald-600 pl-3">
               <div className="flex flex-wrap items-center justify-between gap-1">
                 <h3 className="text-xs sm:text-sm font-bold text-zinc-950">
-                  Astro Yapıcı - Android Mobil Uygulama
+                  AstraNova: Astroloji &amp; Burç — Mobil Uygulama
                 </h3>
                 <span className="text-[11px] font-mono text-emerald-800 font-semibold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
-                  Google Play Store Canlı
+                  Google Play Yayında
                 </span>
               </div>
               <p className="text-[11px] font-mono text-zinc-600 mt-0.5">
-                Kullanılan Teknolojiler: Flutter, Dart, Google Play Store, Local State & Storage
+                Kullanılan Teknolojiler: Flutter, Dart, Efemeris &amp; Natal Harita Algoritması, Firebase + Google Gemini API, Yerel Depolama (Hive / SharedPreferences), 9 Dil Yerelleştirme
               </p>
               <ul className="list-disc list-inside text-xs text-zinc-700 mt-1.5 space-y-0.5">
-                <li>Google Play Store üzerinde aktif kullanıcıya sahip astrolojik analiz ve doğum haritası hesaplama aracı.</li>
-                <li>Dinamik algoritma mantığı ve yerel veri saklama mekanizmaları entegre edildi.</li>
+                <li><strong>Efemeris Hesaplama &amp; Çevrimdışı Saklama:</strong> Doğum tarihi, saati ve konum girdilerinden Güneş/Ay/Yükselen (&quot;Büyük Üçlü&quot;), gezegen boylamları ve ev yerleşimlerini hesaplayan efemeris/natal harita motorunu ve hesaplanan profilleri çevrimdışı saklayan yerel veri katmanını (<code>Hive</code> / <code>SharedPreferences</code>) geliştirdim.</li>
+                <li><strong>Bağlamsal AI Danışman &amp; Sinastri:</strong> Firebase üzerinden Google Gemini API ile kullanıcının kişisel doğum haritası verilerini bağlam olarak kullanan gerçek zamanlı AI danışman (&quot;Kahin&quot;), iki doğum haritasını karşılaştıran sinastri (ilişki uyumu) modülü ve 9 dilde yerel arayüz desteğini uyguladım.</li>
               </ul>
               <div className="mt-1 text-[11px] text-zinc-600 font-mono">
                 Google Play: <a href="https://play.google.com/store/apps/details?id=com.astro.yapici" target="_blank" rel="noreferrer" className="text-emerald-700 underline">play.google.com/store/apps/details?id=com.astro.yapici</a>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Section 3: Technical Skills (Single-column ATS layout, project-grounded) */}
+        <section className="mb-6">
+          <h2 className="text-sm font-bold uppercase tracking-wider text-zinc-950 border-b border-zinc-300 pb-1 mb-2.5">
+            Teknik Yetkinlikler (Proje Kullanımına Göre)
+          </h2>
+          <div className="space-y-1.5 text-xs text-zinc-800">
+            <p><strong className="text-zinc-950">Flutter &amp; Mobil Geliştirme:</strong> Flutter, Dart, Riverpod (State Management), InAppWebView &amp; JS Bridge (DOM Overlay), RevenueCat (IAP / Abonelik), AdMob SSV, SharedPreferences &amp; Hive, Çoklu Dil / l10n (RTL dahil).</p>
+            <p><strong className="text-zinc-950">Mobil Ürün Kalitesi &amp; Dağıtım:</strong> Google Play Console &amp; Apple App Store Connect (Xcode imzalama, TestFlight, Store Review), Codemagic CI/CD, Birim &amp; Widget Testleri (<code>flutter test</code>, <code>flutter analyze</code>), p50/p95 Gecikme Telemetrisi.</p>
+            <p><strong className="text-zinc-950">API, Backend &amp; Güvenlik:</strong> Supabase (PostgreSQL, RLS, Edge Functions / Deno, Anonim + OAuth Auth), Sunucu Tarafı Sır/Anahtar İzolasyonu, SHA-256 Önbellekleme (Cache), Paralel Çalışma Kilitleri (Work Leases), Atomik Ledger RPC &amp; Dağıtık Rate Limiting.</p>
+            <p><strong className="text-zinc-950">React, Next.js &amp; Web:</strong> Next.js 16 (App Router, SSR/SEO), React 19, TypeScript, Prisma ORM, PostgreSQL, NextAuth (<code>bcryptjs</code>, SHA-256 Token), Stripe Webhooks, Tailwind CSS.</p>
           </div>
         </section>
 

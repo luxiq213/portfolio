@@ -179,9 +179,15 @@ function ProjectCard({ project }: { project: Project }) {
             )}
 
             {project.appStoreUrl && (
-              <span className="inline-flex items-center gap-1 text-[11px] font-semibold px-2 py-0.5 rounded-lg bg-zinc-800 border border-zinc-700 text-zinc-300">
-                <span>iOS App Store</span>
-              </span>
+              <a
+                href={project.appStoreUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1 rounded-lg bg-sky-950/80 border border-sky-500/40 text-sky-300 hover:bg-sky-900 transition-colors"
+              >
+                <span>App Store</span>
+                <ExternalLink className="w-3 h-3" />
+              </a>
             )}
 
             {project.liveUrl && !project.playStoreUrl && project.liveUrl !== "#" && (
