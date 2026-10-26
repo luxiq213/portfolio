@@ -224,20 +224,23 @@ export default function CvPage() {
         {/* Section 4: Engineering Decisions & Architecture Cases */}
         <section className="mb-8">
           <h2 className="text-base font-bold uppercase tracking-wider text-zinc-950 border-b-2 border-zinc-300 pb-1.5 mb-3.5">
-            Öne Çıkan Mühendislik Kararları &amp; Mimari Çözümler
+            Teknik Vaka İncelemeleri (Problem → Mimari Karar → Test &amp; Sonuç)
           </h2>
           <div className="space-y-3.5 text-sm text-zinc-700 leading-relaxed">
-            <div className="border-l-4 border-zinc-900 pl-3.5">
-              <p className="font-bold text-zinc-950">1. Kaynak Görseli Bozmadan Gerçek Zamanlı Çeviri Katmanı (MangaLens):</p>
-              <p>Sayfa görsellerini yeniden işleyip kalite ve hız kaybetmek yerine, <code>InAppWebView</code> üzerinde JavaScript köprüsüyle çalışan ayrık DOM overlay mimarisi kuruldu. Uzun dikey manga şeritleri görünür bölge öncelikli parçalara (tiling) bölünerek ilk çeviri katmanı görünme süresi (<code>time_to_first_translation_overlay_ms</code>) düşürüldü ve kaydırma/zoom sırasında koordinat senkronizasyonu korundu.</p>
+            <div className="border-l-4 border-cyan-600 pl-3.5 space-y-1">
+              <p className="font-bold text-zinc-950">1. MangaLens — Ayrık DOM Overlay, AI Maliyet Koruması ve İdempotent Kredi Muhasebesi</p>
+              <p><strong>Problem &amp; Mimari Karar:</strong> Uzun manga şeritlerini görseli bozmadan çevirmek ve aynı sayfa için tekrarlayan Gemini API maliyetini önlemek amacıyla <code>InAppWebView + JS Bridge</code> tabanlı ayrık DOM overlay ve görünür bölge öncelikli parçalama (<em>tiling</em>) kuruldu. Tüm AI çağrıları Supabase Edge Functions arkasına alınarak URL SHA-256 önbelleği (24s) ve paralel çalışma kilitleri (<code>translation_work_leases</code>) uygulandı.</p>
+              <p><strong>Test &amp; Sonuç:</strong> 16 otomatik birim/widget testi (<code>credit_account_test</code>, <code>translation_block_test</code>, <code>translation_overlay_preferences_test</code> vb.) ve <code>flutter analyze</code> sıfır hata ile doğrulandı; API anahtarları istemciden %100 izole edildi ve başarısız isteklerde atomik PostgreSQL RPC&apos;leriyle otomatik kredi iadesi sağlandı.</p>
             </div>
-            <div className="border-l-4 border-cyan-600 pl-3.5">
-              <p className="font-bold text-zinc-950">2. AI API Maliyet Koruması ve İdempotent Kredi Muhasebesi (MangaLens):</p>
-              <p>Mobil istemciye hiçbir gizli anahtar gömülmeden tüm Gemini çağrıları Supabase Edge Functions arkasına alındı. Görsel URL&apos;nin SHA-256 özetiyle 24 saatlik önbellek ve paralel <code>translation_work_leases</code> kilitleri uygulanarak aynı sayfa için mükerrer LLM çağrıları engellendi. Başarısız çeviri isteklerinde kredi iadesi ve RevenueCat/AdMob SSV bakiye yüklemeleri atomik PostgreSQL RPC&apos;leriyle garanti altına alındı.</p>
+            <div className="border-l-4 border-violet-600 pl-3.5 space-y-1">
+              <p className="font-bold text-zinc-950">2. ProPromptGen — Kesintiye Dayanıklı (Fault-Tolerant) Hibrit Prompt Motoru ve Dağıtık Rate Limit</p>
+              <p><strong>Problem &amp; Mimari Karar:</strong> 50+ AI modelinin parametre kurallarını 9 dilde desteklemek ve harici LLM API kesintilerinde servisin durmasını engellemek için <code>@google/generative-ai</code> (Gemini API) çağrısının arkasına kural/şablon tabanlı derleyici (<em>fallback engine</em>) ve PostgreSQL üzerinde serverless örnekler arası paylaşılan kalıcı <code>RateLimit</code> tablosu eklendi.</p>
+              <p><strong>Test &amp; Sonuç:</strong> NextAuth üzerinde <code>bcryptjs</code> ve ham token yerine SHA-256 özeti saklayan şifre sıfırlama akışı, Stripe webhook imza doğrulaması ve <em>Web Vitals</em> kontrolleri uygulandı; API kesintilerinde dahi 9 dilde kesintisiz prompt üretimi ve SSR indekslemesi sağlandı.</p>
             </div>
-            <div className="border-l-4 border-violet-600 pl-3.5">
-              <p className="font-bold text-zinc-950">3. Kesintiye Dayanıklı (Fault-Tolerant) Hibrit Prompt Üretimi (ProPromptGen):</p>
-              <p>Harici LLM API gecikmeleri veya kota sınırlarında kullanıcı deneyiminin kesintiye uğramaması için <code>@google/generative-ai</code> çağrısının arkasına 50+ AI platformuna özel kural/şablon derleyici (fallback engine) ve PostgreSQL üzerinde serverless örnekler arası paylaşılan kalıcı <code>RateLimit</code> koruma katmanı eklendi.</p>
+            <div className="border-l-4 border-emerald-600 pl-3.5 space-y-1">
+              <p className="font-bold text-zinc-950">3. AstraNova — Çevrimdışı Efemeris Hesaplama ve Doğum Haritası Bağlamlı AI Danışman</p>
+              <p><strong>Problem &amp; Mimari Karar:</strong> Statik burç metinleri yerine kullanıcının doğum tarihi, saati ve koordinatlarına göre gerçek astronomik harita çıkarmak için Julian Day ve yerel yıldız zamanı (<em>Sidereal Time</em>) tabanlı efemeris motoru geliştirildi; Firebase üzerinden Google Gemini API&apos;ye kullanıcının natal harita verileri bağlam olarak aktarılarak &quot;Kahin&quot; AI danışmanı ve çift harita sinastri analizi kurgulandı.</p>
+              <p><strong>Test &amp; Sonuç:</strong> Farklı zaman dilimleri ve enlem/boylam uç değerleri için hesaplama doğrulaması yapıldı; temel harita ve profil verileri internet gerektirmeden yerel depolamada (<code>Hive / SharedPreferences</code>) çevrimdışı saklanırken 9 dilde yerel kullanıcı deneyimi sunuldu.</p>
             </div>
           </div>
         </section>

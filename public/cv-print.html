@@ -56,17 +56,17 @@
       color: #0f172a;
     }
     .section {
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
     .section-title {
-      font-size: 10.2pt;
+      font-size: 10pt;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.8px;
       color: #0f172a;
       border-bottom: 1.5px solid #cbd5e1;
-      padding-bottom: 3px;
-      margin-bottom: 8px;
+      padding-bottom: 2.5px;
+      margin-bottom: 6.5px;
     }
     .summary-text {
       font-size: 9.3pt;
@@ -127,13 +127,13 @@
     .skill-list {
       display: flex;
       flex-direction: column;
-      gap: 7px;
-      font-size: 9.1pt;
+      gap: 5.5px;
+      font-size: 8.9pt;
       color: #334155;
-      line-height: 1.44;
+      line-height: 1.38;
     }
     .skill-row {
-      padding: 6.5px 10px;
+      padding: 5.5px 9px;
       background: #f8fafc;
       border: 1px solid #e2e8f0;
       border-radius: 6px;
@@ -141,20 +141,20 @@
     .skill-row strong {
       color: #0f172a;
       display: block;
-      font-size: 9.4pt;
-      margin-bottom: 1.5px;
+      font-size: 9.2pt;
+      margin-bottom: 1px;
     }
     .case-card {
       border-left: 3px solid #0f172a;
       padding-left: 10px;
-      margin-bottom: 9px;
-      font-size: 9.1pt;
+      margin-bottom: 7px;
+      font-size: 8.9pt;
       color: #334155;
-      line-height: 1.44;
+      line-height: 1.38;
     }
     .case-card strong {
       color: #0f172a;
-      font-size: 9.4pt;
+      font-size: 9.2pt;
     }
     .education-item {
       display: flex;
@@ -283,18 +283,21 @@
   </div>
 
   <div class="section">
-    <div class="section-title">Öne Çıkan Mühendislik Kararları &amp; Mimari Çözümler</div>
-    <div class="case-card">
-      <strong>1. Kaynak Görseli Bozmadan Gerçek Zamanlı Çeviri Katmanı (MangaLens):</strong>
-      <div>Sayfa görsellerini yeniden işleyip kalite ve hız kaybetmek yerine, <em>InAppWebView</em> üzerinde JavaScript köprüsüyle çalışan ayrık DOM overlay mimarisi kuruldu. Uzun dikey manga şeritleri görünür bölge öncelikli parçalara (tiling) bölünerek ilk çeviri katmanı görünme süresi (<em>time_to_first_translation_overlay_ms</em>) düşürüldü ve kaydırma/zoom sırasında koordinat senkronizasyonu korundu.</div>
-    </div>
+    <div class="section-title">Teknik Vaka İncelemeleri (Problem → Mimari Karar → Test &amp; Sonuç)</div>
     <div class="case-card" style="border-left-color: #0284c7;">
-      <strong>2. AI API Maliyet Koruması ve İdempotent Kredi Muhasebesi (MangaLens):</strong>
-      <div>Mobil istemciye hiçbir gizli anahtar gömülmeden tüm Gemini çağrıları Supabase Edge Functions arkasına alındı. Görsel URL&apos;nin SHA-256 özetiyle 24 saatlik önbellek ve paralel <em>translation_work_leases</em> kilitleri uygulanarak aynı sayfa için mükerrer LLM çağrıları engellendi. Başarısız çeviri isteklerinde kredi iadesi ve RevenueCat/AdMob SSV bakiye yüklemeleri atomik PostgreSQL RPC&apos;leriyle garanti altına alındı.</div>
+      <strong>1. MangaLens — Ayrık DOM Overlay, AI Maliyet Koruması ve İdempotent Kredi Muhasebesi</strong>
+      <div><strong>Problem &amp; Mimari Karar:</strong> Uzun manga şeritlerini görseli bozmadan çevirmek ve aynı sayfa için tekrarlayan Gemini API maliyetini önlemek amacıyla <em>InAppWebView + JS Bridge</em> tabanlı ayrık DOM overlay ve görünür bölge öncelikli parçalama (<em>tiling</em>) kuruldu. Tüm AI çağrıları Supabase Edge Functions arkasına alınarak URL SHA-256 önbelleği (24s) ve paralel çalışma kilitleri (<em>translation_work_leases</em>) uygulandı.</div>
+      <div><strong>Test &amp; Sonuç:</strong> 16 otomatik birim/widget testi (<em>credit_account_test</em>, <em>translation_block_test</em>, <em>translation_overlay_preferences_test</em> vb.) ve <em>flutter analyze</em> sıfır hata ile doğrulandı; API anahtarları istemciden %100 izole edildi ve başarısız isteklerde atomik PostgreSQL RPC&apos;leriyle otomatik kredi iadesi sağlandı.</div>
     </div>
     <div class="case-card" style="border-left-color: #8b5cf6;">
-      <strong>3. Kesintiye Dayanıklı (Fault-Tolerant) Hibrit Prompt Üretimi (ProPromptGen):</strong>
-      <div>Harici LLM API gecikmeleri veya kota sınırlarında kullanıcı deneyiminin kesintiye uğramaması için <em>@google/generative-ai</em> çağrısının arkasına 50+ AI platformuna özel kural/şablon derleyici (fallback engine) ve PostgreSQL üzerinde serverless örnekler arası paylaşılan kalıcı <em>RateLimit</em> koruma katmanı eklendi.</div>
+      <strong>2. ProPromptGen — Kesintiye Dayanıklı (Fault-Tolerant) Hibrit Prompt Motoru ve Dağıtık Rate Limit</strong>
+      <div><strong>Problem &amp; Mimari Karar:</strong> 50+ AI modelinin parametre kurallarını 9 dilde desteklemek ve harici LLM API kesintilerinde servisin durmasını engellemek için <em>@google/generative-ai</em> (Gemini API) çağrısının arkasına kural/şablon tabanlı derleyici (<em>fallback engine</em>) ve PostgreSQL üzerinde serverless örnekler arası paylaşılan kalıcı <em>RateLimit</em> tablosu eklendi.</div>
+      <div><strong>Test &amp; Sonuç:</strong> NextAuth üzerinde <em>bcryptjs</em> ve ham token yerine SHA-256 özeti saklayan şifre sıfırlama akışı, Stripe webhook imza doğrulaması ve <em>Web Vitals</em> kontrolleri uygulandı; API kesintilerinde dahi 9 dilde kesintisiz prompt üretimi ve SSR indekslemesi sağlandı.</div>
+    </div>
+    <div class="case-card" style="border-left-color: #10b981;">
+      <strong>3. AstraNova — Çevrimdışı Efemeris Hesaplama ve Doğum Haritası Bağlamlı AI Danışman</strong>
+      <div><strong>Problem &amp; Mimari Karar:</strong> Statik burç metinleri yerine kullanıcının doğum tarihi, saati ve koordinatlarına göre gerçek astronomik harita çıkarmak için Julian Day ve yerel yıldız zamanı (<em>Sidereal Time</em>) tabanlı efemeris motoru geliştirildi; Firebase üzerinden Google Gemini API&apos;ye kullanıcının natal harita verileri bağlam olarak aktarılarak &quot;Kahin&quot; AI danışmanı ve çift harita sinastri analizi kurgulandı.</div>
+      <div><strong>Test &amp; Sonuç:</strong> Farklı zaman dilimleri ve enlem/boylam uç değerleri için hesaplama doğrulaması yapıldı; temel harita ve profil verileri internet gerektirmeden yerel depolamada (<em>Hive / SharedPreferences</em>) çevrimdışı saklanırken 9 dilde yerel kullanıcı deneyimi sunuldu.</div>
     </div>
   </div>
 
