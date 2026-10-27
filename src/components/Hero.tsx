@@ -79,7 +79,7 @@ export default function Hero() {
           {/* Short Bio */}
           <p className="text-zinc-400 text-base sm:text-lg leading-relaxed max-w-2xl font-sans">
             Tek kod tabanından <span className="text-cyan-300 font-medium">Flutter & Dart</span> ile Google Play ve App Store&apos;da canlı yayında olan mobil uygulamalar,{" "}
-            <span className="text-cyan-300 font-medium">OCR & çok modlu LLM API</span> boru hatları ve{" "}
+            <span className="text-cyan-300 font-medium">yapay zeka (LLM) API</span> entegrasyonları ve{" "}
             <span className="text-cyan-300 font-medium">React / Next.js</span> tabanlı modern web platformları geliştiriyorum.
           </p>
 
@@ -90,8 +90,8 @@ export default function Hero() {
               <div className="text-xs text-zinc-400">Canlı Mağaza Ürünleri</div>
             </div>
             <div className="p-3 rounded-xl bg-zinc-900/50 border border-zinc-800/80 backdrop-blur-sm">
-              <div className="text-xl sm:text-2xl font-bold text-violet-400 font-mono">AI & OCR</div>
-              <div className="text-xs text-zinc-400">LLM & Vision Boru Hattı</div>
+              <div className="text-xl sm:text-2xl font-bold text-violet-400 font-mono">Gemini AI</div>
+              <div className="text-xs text-zinc-400">API & Vision Entegrasyonu</div>
             </div>
             <div className="p-3 rounded-xl bg-zinc-900/50 border border-zinc-800/80 backdrop-blur-sm">
               <div className="text-xl sm:text-2xl font-bold text-emerald-400 font-mono">React / Next</div>
@@ -110,7 +110,7 @@ export default function Hero() {
             </a>
 
             <a
-              href="/Mehmet_Comert_CV.pdf?v=6"
+              href="/Mehmet_Comert_CV.pdf?v=7"
               download="Mehmet_Comert_CV.pdf"
               onClick={handleCvDownload}
               className="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-medium text-zinc-200 bg-zinc-900/80 hover:bg-zinc-800 border border-zinc-700 hover:border-cyan-500/40 transition-all transform hover:-translate-y-0.5"

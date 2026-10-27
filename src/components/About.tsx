@@ -14,7 +14,7 @@ export default function About() {
       accent: "text-cyan-400"
     },
     {
-      title: "OCR, Görüntü İşleme & LLM Boru Hatları",
+      title: "Görüntü İşleme & Yapay Zeka Entegrasyonu",
       description: "Google ML Kit / Vision OCR ile metin bölgesi (bounding-box) tespiti yapıyor, çok modlu LLM API'leri (Gemini, OpenAI, Claude) ile bağlamsal çeviri ve yapılandırılmış çıktılar üretiyorum.",
       icon: Cpu,
       color: "from-blue-600 to-violet-600",
@@ -87,7 +87,7 @@ export default function About() {
             </div>
             <div className="flex items-center gap-2 text-xs text-zinc-300 font-mono">
               <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-              <span>OCR (ML Kit / Vision) ve çok modlu LLM API boru hatları</span>
+              <span>Çok modlu yapay zeka (Gemini API) ve görsel çeviri entegrasyonları</span>
             </div>
             <div className="flex items-center gap-2 text-xs text-zinc-300 font-mono">
               <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />

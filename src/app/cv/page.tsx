@@ -39,7 +39,7 @@ export default function CvPage() {
           </button>
 
           <a
-            href="/Mehmet_Comert_CV.pdf?v=6"
+            href="/Mehmet_Comert_CV.pdf?v=7"
             download="Mehmet_Comert_CV.pdf"
             className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl font-medium text-zinc-200 bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 transition-all"
           >
@@ -138,7 +138,7 @@ export default function CvPage() {
                 Flutter, Dart, Riverpod, InAppWebView, Supabase Edge Functions, Gemini API, RevenueCat, AdMob, Codemagic
               </p>
               <ul className="list-disc list-inside text-xs text-zinc-700 mt-1.5 space-y-1">
-                <li><strong>Arayüz &amp; Görsel Parçalama Mimarisi:</strong> Uygulama içi tarayıcıda dikey manga şeritlerini kaynak görseli bozmadan 104 hedef dile çeviren ve çeviri kutusu stilini canlı özelleştiren ayrık DOM katmanı geliştirdim; JS köprüsüyle önce ekranda görünen bölgeyi parçalayıp çevirerek ilk çeviri görünme süresini düşürdüm.</li>
+                <li><strong>Arayüz &amp; Görsel Parçalama Mimarisi:</strong> Uygulama içi tarayıcıda dikey manga şeritlerini kaynak görseli bozmadan 104 hedef dile çeviren ve çeviri kutusu stilini canlı özelleştiren bağımsız DOM katmanı geliştirdim; JS köprüsüyle önce ekranda görünen bölgeyi parçalayıp çevirerek ilk çeviri görünme süresini düşürdüm.</li>
                 <li><strong>Backend Güvenliği &amp; AI Maliyet Optimizasyonu:</strong> API anahtarlarını istemciden izole etmek için <code>gemini-3.5-flash</code> çağrılarını Supabase Edge Functions arkasına aldım; görsel URL&apos;nin SHA-256 özetiyle 24 saatlik önbellek ve aynı sayfaya gelen eşzamanlı isteklerde mükerrer çağrıyı önleyen veritabanı kilit kontrolü kurdum.</li>
                 <li><strong>Gelir Modeli, Kredi Yönetimi &amp; Kalite Güvencesi:</strong> Anonim oturumdan OAuth/e-posta hesabına yükseltme akışını, RevenueCat kredi/abonelik sistemini ve RTL dahil 18 arayüz dilini kurguladım. Başarısız işlemlerde otomatik kredi iadesini ve AdMob ödüllü reklam doğrulamasını PostgreSQL fonksiyonlarıyla (RPC) yönetip 16 birim/widget testi, <code>flutter analyze</code> ve Codemagic CI/CD ile her iki mağazada yayımladım.</li>
               </ul>
@@ -167,7 +167,7 @@ export default function CvPage() {
               </p>
               <ul className="list-disc list-inside text-xs text-zinc-700 mt-1.5 space-y-1">
                 <li><strong>Kesinti Toleranslı Üretim &amp; Çok Dilli Platform:</strong> Kullanıcı girdisini ChatGPT, Claude, Gemini ve Midjourney dahil 50+ AI modeline uygun yapılandırılmış promptlara dönüştüren, route tabanlı 9 dil destekli web ürününü geliştirdim; harici API gecikmelerinde veya kota aşımında servisin durmaması için <code>@google/generative-ai</code> arkasına kural ve şablon tabanlı fallback motoru ekledim.</li>
-                <li><strong>Paylaşımlı Rate Limit, Token Güvenliği &amp; Abonelik:</strong> Çoklu serverless örneklerde bellek içi sayaçlar sıfırlandığı için hız sınırlamasını PostgreSQL üzerindeki paylaşımlı <code>RateLimit</code> tablosuna taşıdım; şifre sıfırlama akışında ham token yerine yalnızca SHA-256 özeti (<code>token_hash</code>) ve <code>bcryptjs</code> kullandım. Topluluk etkileşimlerini, Stripe webhook abonelik döngüsünü ve Critters / Web Vitals optimizasyonlarını tamamladım.</li>
+                <li><strong>Paylaşımlı Rate Limit, Token Güvenliği &amp; Abonelik:</strong> Serverless ortamda bellek içi sayaçlar sıfırlandığı için Rate Limit kontrolünü PostgreSQL üzerindeki paylaşımlı tabloya taşıdım; şifre sıfırlama akışında ham token yerine yalnızca SHA-256 özeti (<code>token_hash</code>) ve <code>bcryptjs</code> kullandım. Topluluk etkileşimlerini, Stripe webhook abonelik döngüsünü ve Critters / Web Vitals optimizasyonlarını tamamladım.</li>
               </ul>
               <div className="mt-1 text-[11px] text-zinc-600 font-mono">
                 Canlı Bağlantı: <a href="https://propromptgen.com" target="_blank" rel="noreferrer" className="text-violet-700 underline">https://propromptgen.com</a>
@@ -188,7 +188,7 @@ export default function CvPage() {
                 Flutter, Dart, Efemeris Motoru, Firebase, Google Gemini API, Hive, SharedPreferences
               </p>
               <ul className="list-disc list-inside text-xs text-zinc-700 mt-1.5 space-y-1">
-                <li><strong>Çevrimdışı Astronomik Hesaplama &amp; Bağlam Enjeksiyonu:</strong> Statik burç metinleri yerine doğum tarihi, saat dilimi ve coğrafi koordinatlardan <em>Julian Day</em> ve <em>Local Sidereal Time</em> üzerinden Güneş, Ay, Yükselen, gezegen boylamları ve evleri hesaplayan efemeris motoru yazdım; üretilen natal harita vektörünü Firebase üzerinden Gemini API&apos;ye sistem bağlamı olarak enjekte ederek gerçek zamanlı AI danışman ve sinastri analizini geliştirdim.</li>
+                <li><strong>Çevrimdışı Astronomik Hesaplama &amp; AI Danışman:</strong> Statik burç metinleri yerine doğum tarihi, saat dilimi ve coğrafi koordinatlardan <em>Julian Day</em> ve <em>Local Sidereal Time</em> üzerinden Güneş, Ay, Yükselen, gezegen boylamları ve evleri hesaplayan efemeris motoru yazdım; üretilen doğum haritası verilerini Firebase üzerinden Gemini API&apos;ye bağlam olarak aktararak gerçek zamanlı AI danışman ve sinastri analizini geliştirdim.</li>
                 <li><strong>Uç Değer Doğrulaması &amp; Yerel Önbellek:</strong> Farklı zaman dilimleri ve enlem/boylam uç değerleri için açısal hesaplama doğrulaması yaptım; hesaplanan harita ve profil verilerini <code>Hive</code> ve <code>SharedPreferences</code> ile cihazda önbellekleyerek 9 dilde çevrimdışı erişim sağladım.</li>
               </ul>
               <div className="mt-1 text-[11px] text-zinc-600 font-mono">

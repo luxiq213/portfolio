@@ -217,7 +217,7 @@
       </div>
       <div class="project-tech">Flutter, Dart, Riverpod, InAppWebView, Supabase Edge Functions, Gemini API, RevenueCat, AdMob, Codemagic</div>
       <ul class="project-desc">
-        <li><strong>Arayüz &amp; Görsel Parçalama Mimarisi:</strong> Uygulama içi tarayıcıda dikey manga şeritlerini kaynak görseli bozmadan 104 hedef dile çeviren ve çeviri kutusu stilini canlı özelleştiren ayrık DOM katmanı geliştirdim; JS köprüsüyle önce ekranda görünen bölgeyi parçalayıp çevirerek ilk çeviri görünme süresini düşürdüm.</li>
+        <li><strong>Arayüz &amp; Görsel Parçalama Mimarisi:</strong> Uygulama içi tarayıcıda dikey manga şeritlerini kaynak görseli bozmadan 104 hedef dile çeviren ve çeviri kutusu stilini canlı özelleştiren bağımsız DOM katmanı geliştirdim; JS köprüsüyle önce ekranda görünen bölgeyi parçalayıp çevirerek ilk çeviri görünme süresini düşürdüm.</li>
         <li><strong>Backend Güvenliği &amp; AI Maliyet Optimizasyonu:</strong> API anahtarlarını istemciden izole etmek için <em>gemini-3.5-flash</em> çağrılarını Supabase Edge Functions arkasına aldım; görsel URL&apos;nin SHA-256 özetiyle 24 saatlik önbellek ve aynı sayfaya gelen eşzamanlı isteklerde mükerrer çağrıyı önleyen veritabanı kilit kontrolü kurdum.</li>
         <li><strong>Gelir Modeli, Kredi Yönetimi &amp; Kalite Güvencesi:</strong> Anonim oturumdan OAuth/e-posta hesabına yükseltme akışını, RevenueCat kredi/abonelik sistemini ve RTL dahil 18 arayüz dilini kurguladım. Başarısız işlemlerde otomatik kredi iadesini ve AdMob ödüllü reklam doğrulamasını PostgreSQL fonksiyonlarıyla (RPC) yönetip 16 birim/widget testi, <em>flutter analyze</em> ve Codemagic CI/CD ile her iki mağazada yayımladım.</li>
       </ul>
@@ -235,7 +235,7 @@
       <div class="project-tech">Next.js 16, React 19, TypeScript, Google Gemini API, Prisma ORM, PostgreSQL, NextAuth, Stripe</div>
       <ul class="project-desc">
         <li><strong>Kesinti Toleranslı Üretim &amp; Çok Dilli Platform:</strong> Kullanıcı girdisini ChatGPT, Claude, Gemini ve Midjourney dahil 50+ AI modeline uygun yapılandırılmış promptlara dönüştüren, route tabanlı 9 dil destekli web ürününü geliştirdim; harici API gecikmelerinde veya kota aşımında servisin durmaması için <em>@google/generative-ai</em> arkasına kural ve şablon tabanlı fallback motoru ekledim.</li>
-        <li><strong>Paylaşımlı Rate Limit, Token Güvenliği &amp; Abonelik:</strong> Çoklu serverless örneklerde bellek içi sayaçlar sıfırlandığı için hız sınırlamasını PostgreSQL üzerindeki paylaşımlı <em>RateLimit</em> tablosuna taşıdım; şifre sıfırlama akışında ham token yerine yalnızca SHA-256 özeti (<em>token_hash</em>) ve <em>bcryptjs</em> kullandım. Topluluk etkileşimlerini, Stripe webhook abonelik döngüsünü ve Critters / Web Vitals optimizasyonlarını tamamladım.</li>
+        <li><strong>Paylaşımlı Rate Limit, Token Güvenliği &amp; Abonelik:</strong> Serverless ortamda bellek içi sayaçlar sıfırlandığı için Rate Limit kontrolünü PostgreSQL üzerindeki paylaşımlı tabloya taşıdım; şifre sıfırlama akışında ham token yerine yalnızca SHA-256 özeti (<em>token_hash</em>) ve <em>bcryptjs</em> kullandım. Topluluk etkileşimlerini, Stripe webhook abonelik döngüsünü ve Critters / Web Vitals optimizasyonlarını tamamladım.</li>
       </ul>
       <div class="project-link" style="color:#7e22ce;">Canlı Bağlantı: <a href="https://propromptgen.com" style="color:#7e22ce; text-decoration:none;">https://propromptgen.com</a></div>
     </div>
@@ -247,7 +247,7 @@
       </div>
       <div class="project-tech">Flutter, Dart, Efemeris Motoru, Firebase, Google Gemini API, Hive, SharedPreferences</div>
       <ul class="project-desc">
-        <li><strong>Çevrimdışı Astronomik Hesaplama &amp; Bağlam Enjeksiyonu:</strong> Statik burç metinleri yerine doğum tarihi, saat dilimi ve coğrafi koordinatlardan <em>Julian Day</em> ve <em>Local Sidereal Time</em> üzerinden Güneş, Ay, Yükselen, gezegen boylamları ve evleri hesaplayan efemeris motoru yazdım; üretilen natal harita vektörünü Firebase üzerinden Gemini API&apos;ye sistem bağlamı olarak enjekte ederek gerçek zamanlı AI danışman ve sinastri analizini geliştirdim.</li>
+        <li><strong>Çevrimdışı Astronomik Hesaplama &amp; AI Danışman:</strong> Statik burç metinleri yerine doğum tarihi, saat dilimi ve coğrafi koordinatlardan <em>Julian Day</em> ve <em>Local Sidereal Time</em> üzerinden Güneş, Ay, Yükselen, gezegen boylamları ve evleri hesaplayan efemeris motoru yazdım; üretilen doğum haritası verilerini Firebase üzerinden Gemini API&apos;ye bağlam olarak aktararak gerçek zamanlı AI danışman ve sinastri analizini geliştirdim.</li>
         <li><strong>Uç Değer Doğrulaması &amp; Yerel Önbellek:</strong> Farklı zaman dilimleri ve enlem/boylam uç değerleri için açısal hesaplama doğrulaması yaptım; hesaplanan harita ve profil verilerini <em>Hive</em> ve <em>SharedPreferences</em> ile cihazda önbellekleyerek 9 dilde çevrimdışı erişim sağladım.</li>
       </ul>
       <div class="project-link" style="color:#047857;">Play Store: <a href="https://play.google.com/store/apps/details?id=com.astro.yapici" style="color:#047857; text-decoration:none;">play.google.com/store/apps/details?id=com.astro.yapici</a></div>
