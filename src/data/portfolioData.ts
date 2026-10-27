@@ -225,28 +225,36 @@ class AstraNovaEngine {
 
   timeline: [
     {
-      year: "Mezuniyet",
-      title: "Bilgisayar Programcılığı Mezuniyeti",
-      institution: "Ondokuz Mayıs Üniversitesi (OMÜ)",
-      description: "Algoritma tasarımı, Nesne Yönelimli Programlama (OOP), Veritabanı Sistemleri (SQL), Veri Yapıları ve Mobil/Web yazılım geliştirme alanlarında eğitim başarıyla tamamlandı.",
-      badge: "Ön Lisans",
-      type: "education"
-    },
-    {
       year: "2024 - Günümüz",
-      title: "Mobil Uygulama Geliştiricisi (Flutter)",
-      institution: "Google Play Store & Apple App Store",
-      description: "MangaLens: Manga Çeviri (iOS & Android) ve AstraNova: Astroloji & Burç (Android) gibi canlı uygulamaların sıfırdan geliştirilmesi, mağaza onay süreçleri (Store Review) ve bakım yönetimi.",
+      title: "Mobil Uygulama Geliştiricisi (Flutter & Dart)",
+      institution: "Google Play Store & Apple App Store (Bağımsız Geliştirici)",
+      description: "MangaLens: Manga Çeviri (iOS & Android) ve AstraNova: Astroloji & Burç (Android) uygulamalarının uçtan uca geliştirilmesi, Supabase Edge Functions + Gemini AI entegrasyonları, RevenueCat IAP ve mağaza yayın/onay süreçlerinin yönetimi.",
       badge: "Canlı Ürünler",
       type: "experience"
     },
     {
       year: "2024 - Günümüz",
-      title: "Yapay Zeka & Web Platform Geliştirme",
+      title: "Full-Stack Web & AI Ürün Geliştirme",
       institution: "ProPromptGen.com",
-      description: "Modern web teknolojileri (React, Next.js, Tailwind CSS) ve yapay zeka istem mühendisliği (Prompt Engineering) ile propromptgen.com platformunun sıfırdan hayata geçirilmesi.",
-      badge: "Web Platformu",
+      description: "Next.js (App Router), React 19, TypeScript, Prisma + PostgreSQL, NextAuth, Stripe ve Google Gemini API ile 9 dilli propromptgen.com SaaS platformunun sıfırdan geliştirilmesi ve işletilmesi.",
+      badge: "SaaS Platformu",
       type: "experience"
+    },
+    {
+      year: "Staj Dönemi",
+      title: "Bilgi İşlem Stajyeri (Kurumsal Yazılım & Veritabanı)",
+      institution: "Körfez Belediyesi — Bilgi İşlem Müdürlüğü",
+      description: "Bilgisayar Programcılığı eğitimi kapsamında Bilgi İşlem Müdürlüğü bünyesinde kurumsal yazılım mimarilerinin, ilişkisel veritabanı (SQL) süreçlerinin ve belediye içi bilgi sistemlerinin incelenmesi, veri bütünlüğü kontrolleri ve teknik süreçlerin desteklenmesi.",
+      badge: "Kurumsal Staj",
+      type: "experience"
+    },
+    {
+      year: "Mezuniyet",
+      title: "Bilgisayar Programcılığı Mezuniyeti",
+      institution: "Ondokuz Mayıs Üniversitesi (OMÜ)",
+      description: "Algoritma tasarımı, Nesne Yönelimli Programlama (OOP), Veritabanı Yönetim Sistemleri (SQL), Veri Yapıları ve Mobil/Web yazılım geliştirme alanlarında ön lisans eğitimi başarıyla tamamlandı.",
+      badge: "Ön Lisans",
+      type: "education"
     }
   ] as TimelineItem[]
 };

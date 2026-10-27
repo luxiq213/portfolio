@@ -245,24 +245,41 @@ export default function CvPage() {
           </div>
         </section>
 
-        {/* Section 4: Education */}
+        {/* Section 5: Experience & Education */}
         <section className="mb-6">
           <h2 className="text-sm font-bold uppercase tracking-wider text-zinc-950 border-b border-zinc-300 pb-1 mb-2.5">
-            Eğitim
+            Kurumsal Deneyim &amp; Eğitim
           </h2>
-          <div>
-            <div className="flex flex-wrap items-center justify-between gap-1">
-              <h3 className="text-xs sm:text-sm font-bold text-zinc-950">
-                Ondokuz Mayıs Üniversitesi (OMÜ)
-              </h3>
-              <span className="text-xs font-mono text-zinc-600">Mezun</span>
+          <div className="space-y-3">
+            <div>
+              <div className="flex flex-wrap items-center justify-between gap-1">
+                <h3 className="text-xs sm:text-sm font-bold text-zinc-950">
+                  Körfez Belediyesi — Bilgi İşlem Müdürlüğü
+                </h3>
+                <span className="text-xs font-mono text-zinc-600">Üniversite / Yaz Stajı</span>
+              </div>
+              <p className="text-xs font-medium text-cyan-800">
+                Bilgi İşlem &amp; Yazılım Stajyeri
+              </p>
+              <p className="text-xs text-zinc-600 mt-0.5">
+                Bilgi İşlem Müdürlüğü bünyesinde kurumsal yazılım süreçlerinin, ilişkisel veritabanı (SQL) yapılarının ve kurum içi bilgi sistemlerinin incelenmesi, veri akışı ve teknik operasyon süreçlerinin desteklenmesi.
+              </p>
             </div>
-            <p className="text-xs font-medium text-cyan-800">
-              Bilgisayar Programcılığı (Ön Lisans)
-            </p>
-            <p className="text-xs text-zinc-600 mt-1">
-              Temel dersler: Algoritmalar ve Veri Yapıları, Nesne Yönelimli Programlama (OOP), Veritabanı Yönetimi (SQL), Web ve Mobil Programlama Temelleri.
-            </p>
+
+            <div className="pt-2 border-t border-zinc-200">
+              <div className="flex flex-wrap items-center justify-between gap-1">
+                <h3 className="text-xs sm:text-sm font-bold text-zinc-950">
+                  Ondokuz Mayıs Üniversitesi (OMÜ)
+                </h3>
+                <span className="text-xs font-mono text-zinc-600">Mezun</span>
+              </div>
+              <p className="text-xs font-medium text-cyan-800">
+                Bilgisayar Programcılığı (Ön Lisans)
+              </p>
+              <p className="text-xs text-zinc-600 mt-0.5">
+                Temel dersler: Algoritmalar ve Veri Yapıları, Nesne Yönelimli Programlama (OOP), Veritabanı Yönetimi (SQL), Web ve Mobil Programlama.
+              </p>
+            </div>
           </div>
         </section>
 
