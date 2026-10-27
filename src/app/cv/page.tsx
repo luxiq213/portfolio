@@ -49,8 +49,13 @@ export default function CvPage() {
         </div>
       </div>
 
-      {/* Printable CV Document (A4 format ATS layout) */}
-      <main className="max-w-4xl mx-auto bg-white p-8 sm:p-12 rounded-2xl shadow-2xl print:shadow-none print:p-0 print:m-0 print:max-w-none text-zinc-900 font-sans leading-relaxed">
+      {/* Printable CV Document (2-Page A4 format ATS layout) */}
+      <main className="max-w-4xl mx-auto space-y-8 print:space-y-0 text-zinc-900 font-sans leading-relaxed">
+        {/* PAGE 1 */}
+        <div className="relative bg-white p-8 sm:p-12 rounded-2xl shadow-2xl print:shadow-none print:rounded-none print:p-0 print:m-0">
+          <span className="hidden sm:inline-block print:hidden absolute top-4 right-6 text-[11px] font-mono text-zinc-400 bg-zinc-100 px-2.5 py-0.5 rounded-full border border-zinc-200">
+            Sayfa 1 / 2
+          </span>
         {/* Header */}
         <header className="border-b-2 border-zinc-800 pb-6 mb-6">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
@@ -194,9 +199,15 @@ export default function CvPage() {
             </div>
           </div>
         </section>
+        </div>
 
+        {/* PAGE 2 */}
+        <div className="relative bg-white p-8 sm:p-12 rounded-2xl shadow-2xl print:shadow-none print:rounded-none print:p-0 print:m-0 print:break-before-page">
+          <span className="hidden sm:inline-block print:hidden absolute top-4 right-6 text-[11px] font-mono text-zinc-400 bg-zinc-100 px-2.5 py-0.5 rounded-full border border-zinc-200">
+            Sayfa 2 / 2
+          </span>
         {/* Section 3: Technical Skills (Single-column ATS layout, project-grounded) */}
-        <section className="mb-8 print:break-before-page">
+        <section className="mb-8">
           <h2 className="text-base font-bold uppercase tracking-wider text-zinc-950 border-b-2 border-zinc-300 pb-1.5 mb-3.5">
             Teknik Yetkinlikler (Proje Kullanımına Göre)
           </h2>
@@ -298,6 +309,7 @@ export default function CvPage() {
             </div>
           </div>
         </section>
+        </div>
       </main>
     </div>
   );
