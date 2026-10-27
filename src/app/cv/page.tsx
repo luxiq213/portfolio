@@ -39,7 +39,7 @@ export default function CvPage() {
           </button>
 
           <a
-            href="/Mehmet_Comert_CV.pdf"
+            href="/Mehmet_Comert_CV.pdf?v=2"
             download="Mehmet_Comert_CV.pdf"
             className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl font-medium text-zinc-200 bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 transition-all"
           >
