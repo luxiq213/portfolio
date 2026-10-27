@@ -133,12 +133,12 @@ export default function CvPage() {
                 </span>
               </div>
               <p className="text-[11px] font-mono text-zinc-600 mt-0.5">
-                Kullanılan Teknolojiler: Flutter, Dart, Riverpod, InAppWebView (JS Bridge), Supabase Edge Functions, Gemini 3.5 Flash Vision, RevenueCat IAP, AdMob SSV
+                Kullanılan Teknolojiler: Flutter, Dart, Riverpod, InAppWebView (JS Bridge), Supabase, Gemini Multimodal AI, RevenueCat IAP, AdMob, Codemagic CI/CD
               </p>
               <ul className="list-disc list-inside text-xs text-zinc-700 mt-1.5 space-y-0.5">
-                <li><strong>Ayrık Çeviri Katmanı &amp; Özelleştirme:</strong> Flutter/Dart ile geliştirilen MangaLens&apos;i Android ve iOS mağazalarında yayımladım. <code>InAppWebView</code> ve JS köprüsüyle kaynak görseli bozmadan görünür bölge öncelikli parçalama (tiling), kaydırma/zoom senkronlu DOM overlay katmanı ve cihazda/bulutta saklanan çeviri kutusu özelleştirmesi (font, boyut, opaklık, renk, kenarlık) işlevlerini hayata geçirdim.</li>
-                <li><strong>AI Çeviri, Maliyet &amp; Güvenlik:</strong> Supabase Edge Functions (<code>translate-page</code>) üzerinde <code>gemini-3.5-flash</code> multimodal vision ile 104 hedef dile yapılandırılmış JSON çevirisi kurguladım; API anahtarlarını sunucuda izole edip görsel URL&apos;nin SHA-256 özetiyle 24 saatlik önbellek ve çalışma kilitleri (<code>translation_work_leases</code>) uygulayarak mükerrer AI çağrı maliyetini önledim.</li>
-                <li><strong>IAP, Kredi &amp; Test Doğrulaması:</strong> RevenueCat webhook&apos;larıyla idempotent <code>LENS</code> kredi paketleri ve Plus/Pro abonelikleri, hata anında otomatik iade yapan değişmez ledger RPC&apos;leri ve AdMob SSV imzalı ödüllü reklam akışını geliştirdim; 16 otomatik birim/widget testi (<code>flutter test</code>, <code>flutter analyze</code> sıfır hata) ve p50/p95 gecikme telemetrisi uyguladım.</li>
+                <li><strong>Ürün &amp; Okuma Deneyimi:</strong> Flutter ve Riverpod ile geliştirip Google Play ve App Store&apos;da yayımladım. Uygulama içi özel tarayıcıda manga sayfalarını kaynak görseli değiştirmeden 104 hedef dile çeviren ve çeviri kutusunun görünümünü (font, boyut, renk, opaklık, kenarlık) canlı özelleştiren ayrık katman arayüzünü hayata geçirdim.</li>
+                <li><strong>Kullanıcı Akışı, Gelir Modeli &amp; Yerelleştirme:</strong> Kayıt zorunluluğu olmayan anonim oturumdan OAuth/e-posta hesabına yükseltme akışını, RevenueCat ile <code>LENS</code> kredi paketleri ve Plus/Pro abonelik sistemini, ödüllü reklam/promosyon modüllerini ve 18 arayüz dilini (RTL dahil) geliştirdim.</li>
+                <li><strong>Mağaza Dağıtımı &amp; Kalite Güvencesi:</strong> Codemagic CI/CD, Xcode imzalama, TestFlight ve Google Play Console yayın süreçlerini sıfırdan yönettim; 16 otomatik birim/widget testi (<code>flutter test</code>) ve statik kod analizi (<code>flutter analyze</code> sıfır hata) ile sürüm kararlılığını doğruladım.</li>
               </ul>
               <div className="mt-1 text-[11px] text-zinc-600 font-mono space-y-0.5">
                 <div>
@@ -164,8 +164,8 @@ export default function CvPage() {
                 Kullanılan Teknolojiler: Next.js 16 (App Router, SSR), React 19, TypeScript, Google Gemini API, Prisma ORM, PostgreSQL, NextAuth, Stripe
               </p>
               <ul className="list-disc list-inside text-xs text-zinc-700 mt-1.5 space-y-0.5">
-                <li><strong>Hibrit Prompt Motoru &amp; Çok Dilli Yapı:</strong> Next.js ve TypeScript ile kullanıcı girdisini <code>@google/generative-ai</code> (Gemini API) veya kesinti anında devreye giren kural/şablon fallback mekanizmasıyla 50+ AI platformuna uygun yapılandırılmış promptlara dönüştüren, route tabanlı 9 dil (<code>tr, en, de, fr, es, it, pt, ru, ja</code>) destekli web ürünü geliştirdim.</li>
-                <li><strong>Veritabanı, Güvenlik &amp; Abonelik:</strong> Prisma ve PostgreSQL üzerinde çok dilli prompt çevirileri (JSON), topluluk etkileşimleri (beğeni, iç içe yorum, yer imi, takip, bildirim) ve serverless örnekler arası kalıcı <code>RateLimit</code> tablosunu tasarladım; NextAuth (<code>bcryptjs</code> + SHA-256 şifre sıfırlama) ve Stripe aylık/yıllık Premium abonelik akışlarını entegre ettim.</li>
+                <li><strong>Ürün &amp; Çok Dilli Platform:</strong> Next.js ve TypeScript ile kullanıcı girdisini ChatGPT, Claude, Gemini ve Midjourney dahil 50+ AI platformuna uygun yapılandırılmış promptlara dönüştüren, route tabanlı 9 dil (<code>tr, en, de, fr, es, it, pt, ru, ja</code>) destekli ve mobil uyumlu web ürününü geliştirdim.</li>
+                <li><strong>Topluluk, Kimlik Doğrulama &amp; Abonelik:</strong> Prisma ve PostgreSQL üzerinde çok dilli prompt paylaşımı, beğeni, iç içe yorum, yer imi (bookmark), takip/bildirim sistemi, yönetim paneli ve Stripe webhook&apos;larıyla aylık/yıllık Premium üyelik döngüsünü kurguladım.</li>
               </ul>
               <div className="mt-1 text-[11px] text-zinc-600 font-mono">
                 Canlı Bağlantı: <a href="https://propromptgen.com" target="_blank" rel="noreferrer" className="text-violet-700 underline">https://propromptgen.com</a>
@@ -183,11 +183,10 @@ export default function CvPage() {
                 </span>
               </div>
               <p className="text-[11px] font-mono text-zinc-600 mt-0.5">
-                Kullanılan Teknolojiler: Flutter, Dart, Efemeris &amp; Natal Harita Algoritması, Firebase + Google Gemini API, Yerel Depolama (Hive / SharedPreferences), 9 Dil Yerelleştirme
+                Kullanılan Teknolojiler: Flutter, Dart, Efemeris &amp; Natal Harita Motoru, Firebase + Google Gemini API, Yerel Depolama (Hive / SharedPreferences), 9 Dil Yerelleştirme
               </p>
               <ul className="list-disc list-inside text-xs text-zinc-700 mt-1.5 space-y-0.5">
-                <li><strong>Efemeris Hesaplama &amp; Çevrimdışı Saklama:</strong> Doğum tarihi, saati ve konum girdilerinden Güneş/Ay/Yükselen (&quot;Büyük Üçlü&quot;), gezegen boylamları ve ev yerleşimlerini hesaplayan efemeris/natal harita motorunu ve hesaplanan profilleri çevrimdışı saklayan yerel veri katmanını (<code>Hive</code> / <code>SharedPreferences</code>) geliştirdim.</li>
-                <li><strong>Bağlamsal AI Danışman &amp; Sinastri:</strong> Firebase üzerinden Google Gemini API ile kullanıcının kişisel doğum haritası verilerini bağlam olarak kullanan gerçek zamanlı AI danışman (&quot;Kahin&quot;), iki doğum haritasını karşılaştıran sinastri (ilişki uyumu) modülü ve 9 dilde yerel arayüz desteğini uyguladım.</li>
+                <li><strong>Ürün &amp; Kişiselleştirilmiş Deneyim:</strong> Doğum tarihi, saati ve konum verilerine göre Güneş/Ay/Yükselen (&quot;Büyük Üçlü&quot;), gezegen yerleşimleri ve evleri hesaplayan doğum haritası (natal harita), ilişki uyumu (sinastri), ay/retro takvimi ve gerçek zamanlı AI danışman (&quot;Kahin&quot;) modüllerini 9 dil desteğiyle geliştirdim.</li>
               </ul>
               <div className="mt-1 text-[11px] text-zinc-600 font-mono">
                 Google Play: <a href="https://play.google.com/store/apps/details?id=com.astro.yapici" target="_blank" rel="noreferrer" className="text-emerald-700 underline">play.google.com/store/apps/details?id=com.astro.yapici</a>
@@ -228,19 +227,19 @@ export default function CvPage() {
           </h2>
           <div className="space-y-3.5 text-sm text-zinc-700 leading-relaxed">
             <div className="border-l-4 border-cyan-600 pl-3.5 space-y-1">
-              <p className="font-bold text-zinc-950">1. MangaLens — Ayrık DOM Overlay, AI Maliyet Koruması ve İdempotent Kredi Muhasebesi</p>
-              <p><strong>Problem &amp; Mimari Karar:</strong> Uzun manga şeritlerini görseli bozmadan çevirmek ve aynı sayfa için tekrarlayan Gemini API maliyetini önlemek amacıyla <code>InAppWebView + JS Bridge</code> tabanlı ayrık DOM overlay ve görünür bölge öncelikli parçalama (<em>tiling</em>) kuruldu. Tüm AI çağrıları Supabase Edge Functions arkasına alınarak URL SHA-256 önbelleği (24s) ve paralel çalışma kilitleri (<code>translation_work_leases</code>) uygulandı.</p>
-              <p><strong>Test &amp; Sonuç:</strong> 16 otomatik birim/widget testi (<code>credit_account_test</code>, <code>translation_block_test</code>, <code>translation_overlay_preferences_test</code> vb.) ve <code>flutter analyze</code> sıfır hata ile doğrulandı; API anahtarları istemciden %100 izole edildi ve başarısız isteklerde atomik PostgreSQL RPC&apos;leriyle otomatik kredi iadesi sağlandı.</p>
+              <p className="font-bold text-zinc-950">1. MangaLens — Görsel Tiling, Eşzamanlı AI Maliyet Kilidi ve Atomik Kredi Muhasebesi</p>
+              <p><strong>Problem &amp; Mimari Karar:</strong> Uzun dikey manga şeritlerinde ilk çeviri görünme süresini (<code>time_to_first_translation_overlay_ms</code>) düşürmek için JS köprüsüyle görünür bölge öncelikli parçalama (<em>viewport-first tiling</em>) uygulandı. İstemcide API anahtarı tutmak yerine tüm <code>gemini-3.5-flash</code> çağrıları Supabase Edge Functions arkasına alındı; görsel URL&apos;nin SHA-256 özetiyle 24 saatlik önbellek ve aynı sayfaya gelen eşzamanlı isteklerde mükerrer LLM çağrısını önleyen çalışma kilitleri (<code>translation_work_leases</code>) kuruldu.</p>
+              <p><strong>Test &amp; Sonuç:</strong> Başarısız AI çağrılarında kredi iadesi ve Google açık anahtar imzalı AdMob SSV ödül yüklemeleri değişmez muhasebe defteri (<em>immutable ledger</em>) RPC&apos;leriyle atomik hale getirildi; <code>credit_account_test</code> ve <code>translation_block_test</code> dahil 16 birim/widget testi ve <em>p50/p95</em> telemetri ile doğrulandı.</p>
             </div>
             <div className="border-l-4 border-violet-600 pl-3.5 space-y-1">
-              <p className="font-bold text-zinc-950">2. ProPromptGen — Kesintiye Dayanıklı (Fault-Tolerant) Hibrit Prompt Motoru ve Dağıtık Rate Limit</p>
-              <p><strong>Problem &amp; Mimari Karar:</strong> 50+ AI modelinin parametre kurallarını 9 dilde desteklemek ve harici LLM API kesintilerinde servisin durmasını engellemek için <code>@google/generative-ai</code> (Gemini API) çağrısının arkasına kural/şablon tabanlı derleyici (<em>fallback engine</em>) ve PostgreSQL üzerinde serverless örnekler arası paylaşılan kalıcı <code>RateLimit</code> tablosu eklendi.</p>
-              <p><strong>Test &amp; Sonuç:</strong> NextAuth üzerinde <code>bcryptjs</code> ve ham token yerine SHA-256 özeti saklayan şifre sıfırlama akışı, Stripe webhook imza doğrulaması ve <em>Web Vitals</em> kontrolleri uygulandı; API kesintilerinde dahi 9 dilde kesintisiz prompt üretimi ve SSR indekslemesi sağlandı.</p>
+              <p className="font-bold text-zinc-950">2. ProPromptGen — Kesinti Toleranslı (Fallback) Üretim, Paylaşımlı Rate Limit ve Token Güvenliği</p>
+              <p><strong>Problem &amp; Mimari Karar:</strong> Harici LLM API gecikmelerinde veya kota aşımında servisin durmaması için <code>@google/generative-ai</code> çağrısının arkasına kural/şablon tabanlı derleyici (<em>fallback engine</em>) eklendi. Çoklu serverless örneklerde bellek içi sayaçlar sıfırlandığı için hız sınırlaması PostgreSQL üzerindeki paylaşımlı <code>RateLimit</code> tablosuna taşındı.</p>
+              <p><strong>Test &amp; Sonuç:</strong> Veritabanı sızıntısı riskine karşı şifre sıfırlama akışında ham token yerine yalnızca SHA-256 özeti (<code>token_hash</code>) ve <code>bcryptjs</code> kullanıldı; <em>Critters</em> kritik CSS ve <em>Web Vitals</em> kontrolleriyle 9 dilde kesintisiz üretim ve hızlı SSR açılışı sağlandı.</p>
             </div>
             <div className="border-l-4 border-emerald-600 pl-3.5 space-y-1">
-              <p className="font-bold text-zinc-950">3. AstraNova — Çevrimdışı Efemeris Hesaplama ve Doğum Haritası Bağlamlı AI Danışman</p>
-              <p><strong>Problem &amp; Mimari Karar:</strong> Statik burç metinleri yerine kullanıcının doğum tarihi, saati ve koordinatlarına göre gerçek astronomik harita çıkarmak için Julian Day ve yerel yıldız zamanı (<em>Sidereal Time</em>) tabanlı efemeris motoru geliştirildi; Firebase üzerinden Google Gemini API&apos;ye kullanıcının natal harita verileri bağlam olarak aktarılarak &quot;Kahin&quot; AI danışmanı ve çift harita sinastri analizi kurgulandı.</p>
-              <p><strong>Test &amp; Sonuç:</strong> Farklı zaman dilimleri ve enlem/boylam uç değerleri için hesaplama doğrulaması yapıldı; temel harita ve profil verileri internet gerektirmeden yerel depolamada (<code>Hive / SharedPreferences</code>) çevrimdışı saklanırken 9 dilde yerel kullanıcı deneyimi sunuldu.</p>
+              <p className="font-bold text-zinc-950">3. AstraNova — Çevrimdışı Astronomik Hesaplama (Julian Day / Sidereal Time) ve Bağlam Enjeksiyonu</p>
+              <p><strong>Problem &amp; Mimari Karar:</strong> Statik burç metinleri yerine gerçek gök mekaniği sunmak için doğum tarihi (UTC), saat dilimi ve coğrafi koordinatlardan <em>Julian Day</em> ve yerel yıldız zamanı (<em>Local Sidereal Time</em>) üzerinden gezegen boylamlarını hesaplayan efemeris motoru yazıldı; üretilen natal harita vektörü Firebase üzerinden Gemini API&apos;ye sistem bağlamı (<em>context</em>) olarak enjekte edildi.</p>
+              <p><strong>Test &amp; Sonuç:</strong> Farklı zaman dilimleri ve enlem/boylam uç değerleri için açısal hesaplama doğrulaması yapıldı; hesaplanan haritalar <code>Hive / SharedPreferences</code> ile cihazda önbelleklenerek internet bağlantısı olmadan da anlık erişim sağlandı.</p>
             </div>
           </div>
         </section>
