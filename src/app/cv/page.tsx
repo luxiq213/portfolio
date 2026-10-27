@@ -39,7 +39,7 @@ export default function CvPage() {
           </button>
 
           <a
-            href="/Mehmet_Comert_CV.pdf?v=2"
+            href="/Mehmet_Comert_CV.pdf?v=3"
             download="Mehmet_Comert_CV.pdf"
             className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl font-medium text-zinc-200 bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 transition-all"
           >
@@ -143,7 +143,7 @@ export default function CvPage() {
               <ul className="list-disc list-inside text-xs text-zinc-700 mt-1.5 space-y-0.5">
                 <li><strong>Ürün &amp; Okuma Deneyimi:</strong> Flutter ve Riverpod ile geliştirip Google Play ve App Store&apos;da yayımladım. Uygulama içi özel tarayıcıda manga sayfalarını kaynak görseli değiştirmeden 104 hedef dile çeviren ve çeviri kutusunun görünümünü (font, boyut, renk, opaklık, kenarlık) canlı özelleştiren ayrık katman arayüzünü hayata geçirdim.</li>
                 <li><strong>Kullanıcı Akışı, Gelir Modeli &amp; Yerelleştirme:</strong> Kayıt zorunluluğu olmayan anonim oturumdan OAuth/e-posta hesabına yükseltme akışını, RevenueCat ile <code>LENS</code> kredi paketleri ve Plus/Pro abonelik sistemini, ödüllü reklam/promosyon modüllerini ve 18 arayüz dilini (RTL dahil) geliştirdim.</li>
-                <li><strong>Mağaza Dağıtımı &amp; Kalite Güvencesi:</strong> Codemagic CI/CD, Xcode imzalama, TestFlight ve Google Play Console yayın süreçlerini sıfırdan yönettim; 16 otomatik birim/widget testi (<code>flutter test</code>) ve statik kod analizi (<code>flutter analyze</code> sıfır hata) ile sürüm kararlılığını doğruladım.</li>
+                <li><strong>Mağaza Dağıtımı &amp; Bulut Senkronizasyonu:</strong> Codemagic CI/CD boru hattı, Xcode imzalama, TestFlight, App Store Review ve Google Play Console sürüm/yayın süreçlerini sıfırdan yönettim; Plus/Pro aboneler için çeviri kutusu tercihlerinin cihazlar arası bulut senkronizasyonunu sağladım.</li>
               </ul>
               <div className="mt-1 text-[11px] text-zinc-600 font-mono space-y-0.5">
                 <div>
@@ -240,7 +240,7 @@ export default function CvPage() {
             <div className="border-l-4 border-cyan-600 pl-3.5 space-y-1">
               <p className="font-bold text-zinc-950">1. MangaLens — Görsel Tiling, Eşzamanlı AI Maliyet Kilidi ve Atomik Kredi Muhasebesi</p>
               <p><strong>Problem &amp; Mimari Karar:</strong> Uzun dikey manga şeritlerinde ilk çeviri görünme süresini (<code>time_to_first_translation_overlay_ms</code>) düşürmek için JS köprüsüyle görünür bölge öncelikli parçalama (<em>viewport-first tiling</em>) uygulandı. İstemcide API anahtarı tutmak yerine tüm <code>gemini-3.5-flash</code> çağrıları Supabase Edge Functions arkasına alındı; görsel URL&apos;nin SHA-256 özetiyle 24 saatlik önbellek ve aynı sayfaya gelen eşzamanlı isteklerde mükerrer LLM çağrısını önleyen çalışma kilitleri (<code>translation_work_leases</code>) kuruldu.</p>
-              <p><strong>Test &amp; Sonuç:</strong> Başarısız AI çağrılarında kredi iadesi ve Google açık anahtar imzalı AdMob SSV ödül yüklemeleri değişmez muhasebe defteri (<em>immutable ledger</em>) RPC&apos;leriyle atomik hale getirildi; <code>credit_account_test</code> ve <code>translation_block_test</code> dahil 16 birim/widget testi ve <em>p50/p95</em> telemetri ile doğrulandı.</p>
+              <p><strong>Test &amp; Sonuç:</strong> Başarısız AI çağrılarında kredi iadesi ve Google açık anahtar imzalı AdMob SSV ödül yüklemeleri değişmez muhasebe defteri (<em>immutable ledger</em>) RPC&apos;leriyle atomik hale getirildi; <code>credit_account_test</code> ve <code>translation_block_test</code> dahil 16 birim/widget testi, <code>flutter analyze</code> (sıfır hata) ve <em>p50/p95</em> telemetri ile doğrulandı.</p>
             </div>
             <div className="border-l-4 border-violet-600 pl-3.5 space-y-1">
               <p className="font-bold text-zinc-950">2. ProPromptGen — Kesinti Toleranslı (Fallback) Üretim, Paylaşımlı Rate Limit ve Token Güvenliği</p>
@@ -293,19 +293,19 @@ export default function CvPage() {
           </div>
         </section>
 
-        {/* Section 5: Languages & Soft Skills */}
+        {/* Section 6: Languages & Engineering Discipline */}
         <section>
           <h2 className="text-sm font-bold uppercase tracking-wider text-zinc-950 border-b border-zinc-300 pb-1 mb-2.5">
-            Diller & Yaklaşım
+            Diller &amp; Çalışma Disiplini
           </h2>
-          <div className="grid grid-cols-2 gap-4 text-xs text-zinc-700">
+          <div className="space-y-1.5 text-xs text-zinc-700">
             <div>
-              <p className="font-bold text-zinc-950">Yabancı Dil:</p>
-              <p>Türkçe (Ana Dil) • İngilizce (Mesleki / Teknik Dokümantasyon Okuma)</p>
+              <span className="font-bold text-zinc-950">Yabancı Dil: </span>
+              <span>Türkçe (Ana Dil) • İngilizce (Mesleki / Teknik Dokümantasyon Okuma ve Geliştirme)</span>
             </div>
             <div>
-              <p className="font-bold text-zinc-950">Çalışma Disiplini:</p>
-              <p>Aktif Yapay Zeka Entegrasyonu, Hızlı Adaptasyon, Mağaza Süreçleri Yönetimi, Takım Çalışması & Git İş Akışı</p>
+              <span className="font-bold text-zinc-950">Mühendislik Yaklaşımı: </span>
+              <span>Uçtan Uca Ürün Sahipliği (Tasarım → Geliştirme → Otomatik Test → Mağaza Yayını), Güvenlik Öncelikli API Mimarisi, Maliyet/Performans Ölçümü ve Git İş Akışı</span>
             </div>
           </div>
         </section>

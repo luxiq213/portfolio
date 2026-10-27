@@ -222,7 +222,7 @@
       <ul class="project-desc">
         <li><strong>Ürün &amp; Okuma Deneyimi:</strong> Flutter ve Riverpod ile geliştirip Google Play ve App Store&apos;da yayımladım. Uygulama içi özel tarayıcıda manga sayfalarını kaynak görseli değiştirmeden 104 hedef dile çeviren ve çeviri kutusunun görünümünü (font, boyut, renk, opaklık, kenarlık) canlı özelleştiren ayrık katman arayüzünü hayata geçirdim.</li>
         <li><strong>Kullanıcı Akışı, Gelir Modeli &amp; Yerelleştirme:</strong> Kayıt zorunluluğu olmayan anonim oturumdan OAuth/e-posta hesabına yükseltme akışını, RevenueCat ile LENS kredi paketleri ve Plus/Pro abonelik sistemini, ödüllü reklam/promosyon modüllerini ve 18 arayüz dilini (RTL dahil) geliştirdim.</li>
-        <li><strong>Mağaza Dağıtımı &amp; Kalite Güvencesi:</strong> Codemagic CI/CD, Xcode imzalama, TestFlight ve Google Play Console yayın süreçlerini sıfırdan yönettim; 16 otomatik birim/widget testi (flutter test) ve statik kod analizi (flutter analyze sıfır hata) ile sürüm kararlılığını doğruladım.</li>
+        <li><strong>Mağaza Dağıtımı &amp; Bulut Senkronizasyonu:</strong> Codemagic CI/CD boru hattı, Xcode imzalama, TestFlight, App Store Review ve Google Play Console sürüm/yayın süreçlerini sıfırdan yönettim; Plus/Pro aboneler için çeviri kutusu tercihlerinin cihazlar arası bulut senkronizasyonunu sağladım.</li>
       </ul>
       <div class="project-link">
         Play Store: <a href="https://play.google.com/store/apps/details?id=com.mangalens.app" style="color:#0284c7; text-decoration:none;">play.google.com/store/apps/details?id=com.mangalens.app</a> • 
@@ -286,7 +286,7 @@
     <div class="case-card" style="border-left-color: #0284c7;">
       <strong>1. MangaLens — Görsel Tiling, Eşzamanlı AI Maliyet Kilidi ve Atomik Kredi Muhasebesi</strong>
       <div><strong>Problem &amp; Mimari Karar:</strong> Uzun dikey manga şeritlerinde ilk çeviri görünme süresini (<em>time_to_first_translation_overlay_ms</em>) düşürmek için JS köprüsüyle görünür bölge öncelikli parçalama (<em>viewport-first tiling</em>) uygulandı. İstemcide API anahtarı tutmak yerine tüm <em>gemini-3.5-flash</em> çağrıları Supabase Edge Functions arkasına alındı; görsel URL&apos;nin SHA-256 özetiyle 24 saatlik önbellek ve aynı sayfaya gelen eşzamanlı isteklerde mükerrer LLM çağrısını önleyen çalışma kilitleri (<em>translation_work_leases</em>) kuruldu.</div>
-      <div><strong>Test &amp; Sonuç:</strong> Başarısız AI çağrılarında kredi iadesi ve Google açık anahtar imzalı AdMob SSV ödül yüklemeleri değişmez muhasebe defteri (<em>immutable ledger</em>) RPC&apos;leriyle atomik hale getirildi; <em>credit_account_test</em> ve <em>translation_block_test</em> dahil 16 birim/widget testi ve <em>p50/p95</em> telemetri ile doğrulandı.</div>
+      <div><strong>Test &amp; Sonuç:</strong> Başarısız AI çağrılarında kredi iadesi ve Google açık anahtar imzalı AdMob SSV ödül yüklemeleri değişmez muhasebe defteri (<em>immutable ledger</em>) RPC&apos;leriyle atomik hale getirildi; <em>credit_account_test</em> ve <em>translation_block_test</em> dahil 16 birim/widget testi, <em>flutter analyze</em> (sıfır hata) ve <em>p50/p95</em> telemetri ile doğrulandı.</div>
     </div>
     <div class="case-card" style="border-left-color: #8b5cf6;">
       <strong>2. ProPromptGen — Kesinti Toleranslı (Fallback) Üretim, Paylaşımlı Rate Limit ve Token Güvenliği</strong>

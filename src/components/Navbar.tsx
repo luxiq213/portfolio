@@ -82,7 +82,7 @@ export default function Navbar() {
 
           {/* Download Real PDF */}
           <a
-            href="/Mehmet_Comert_CV.pdf?v=2"
+            href="/Mehmet_Comert_CV.pdf?v=3"
             download="Mehmet_Comert_CV.pdf"
             onClick={triggerConfetti}
             className="flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-medium text-white bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 shadow-md shadow-cyan-500/25 transition-all transform hover:-translate-y-0.5 active:translate-y-0"
