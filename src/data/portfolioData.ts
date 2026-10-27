@@ -37,6 +37,7 @@ export interface TimelineItem {
   description: string;
   badge: string;
   type: "education" | "experience" | "certificate";
+  certificateUrl?: string;
 }
 
 export const PORTFOLIO_DATA = {
@@ -52,7 +53,7 @@ export const PORTFOLIO_DATA = {
     github: "https://github.com/luxiq213",
     linkedin: "https://linkedin.com",
     portfolioUrl: "https://portfolio-fyi0li9cq-luxiq213s-projects.vercel.app/",
-    cvDownloadUrl: "/Mehmet_Comert_CV.pdf?v=3",
+    cvDownloadUrl: "/Mehmet_Comert_CV.pdf?v=4",
     cvViewUrl: "/cv",
     bio: "Ondokuz Mayıs Üniversitesi Bilgisayar Programcılığı mezunuyum. Flutter (Riverpod, InAppWebView) ve Supabase Edge Functions kullanarak Android ve iOS mağazalarında canlı yayında olan ürünler (MangaLens: Manga Çeviri, AstraNova: Astroloji & Burç) geliştirdim. Projelerimde Google Gemini multimodal vision API, SHA-256 önbellekleme, RevenueCat IAP/abonelik, AdMob SSV doğrulaması ve atomik kredi/ledger mimarileri kurguladım. Web tarafında ise Next.js (App Router), React 19, TypeScript, Prisma + PostgreSQL, NextAuth ve Stripe ile çok dilli (9 dil) canlı SaaS platformları (propromptgen.com) üretiyorum.",
     typewriterRoles: [
@@ -255,6 +256,15 @@ class AstraNovaEngine {
       description: "Algoritma tasarımı, Nesne Yönelimli Programlama (OOP), Veritabanı Yönetim Sistemleri (SQL), Veri Yapıları ve Mobil/Web yazılım geliştirme alanlarında ön lisans eğitimi başarıyla tamamlandı.",
       badge: "Ön Lisans",
       type: "education"
+    },
+    {
+      year: "Sertifika",
+      title: "EF SET İngilizce Dil Sertifikası (A1)",
+      institution: "EF Standard English Test (EF SET)",
+      description: "Uluslararası EF SET standartlarında doğrulanabilir İngilizce seviye tespit sertifikası (A1) ve yazılım geliştirme süreçlerinde teknik dokümantasyon/API okuma pratiği.",
+      badge: "EF SET A1 • Doğrulanabilir",
+      type: "certificate",
+      certificateUrl: "https://cert.efset.org/en/vSZxnD"
     }
   ] as TimelineItem[]
 };

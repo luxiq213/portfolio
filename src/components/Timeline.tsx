@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { GraduationCap, Briefcase, Award, Calendar, Sparkles } from "lucide-react";
+import { GraduationCap, Briefcase, Award, Calendar, ExternalLink } from "lucide-react";
 import { PORTFOLIO_DATA } from "@/data/portfolioData";
 
 export default function Timeline() {
@@ -67,6 +67,21 @@ export default function Timeline() {
                 <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed pt-1">
                   {item.description}
                 </p>
+
+                {item.certificateUrl && (
+                  <div className="pt-2">
+                    <a
+                      href={item.certificateUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium text-violet-300 bg-violet-950/50 hover:bg-violet-900/60 border border-violet-500/30 transition-colors"
+                    >
+                      <Award className="w-3.5 h-3.5 text-violet-400" />
+                      <span>Sertifikayı Doğrula: cert.efset.org/en/vSZxnD</span>
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+                  </div>
+                )}
               </div>
             </div>
           );

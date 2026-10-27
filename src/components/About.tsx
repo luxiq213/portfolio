@@ -93,6 +93,20 @@ export default function About() {
               <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
               <span>React, Next.js (App Router) & TypeScript ile modern web mimarisi</span>
             </div>
+            <div className="flex items-center gap-2 text-xs text-zinc-300 font-mono">
+              <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+              <span>
+                EF SET İngilizce Sertifikası (A1):{" "}
+                <a
+                  href="https://cert.efset.org/en/vSZxnD"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-cyan-400 underline hover:text-cyan-300"
+                >
+                  cert.efset.org/en/vSZxnD
+                </a>
+              </span>
+            </div>
           </div>
         </div>
 

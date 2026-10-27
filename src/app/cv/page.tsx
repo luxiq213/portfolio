@@ -39,7 +39,7 @@ export default function CvPage() {
           </button>
 
           <a
-            href="/Mehmet_Comert_CV.pdf?v=3"
+            href="/Mehmet_Comert_CV.pdf?v=4"
             download="Mehmet_Comert_CV.pdf"
             className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl font-medium text-zinc-200 bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 transition-all"
           >
@@ -293,15 +293,26 @@ export default function CvPage() {
           </div>
         </section>
 
-        {/* Section 6: Languages & Engineering Discipline */}
+        {/* Section 6: Languages, Certificates & Engineering Discipline */}
         <section>
           <h2 className="text-sm font-bold uppercase tracking-wider text-zinc-950 border-b border-zinc-300 pb-1 mb-2.5">
-            Diller &amp; Çalışma Disiplini
+            Diller, Sertifika &amp; Çalışma Disiplini
           </h2>
           <div className="space-y-1.5 text-xs text-zinc-700">
             <div>
-              <span className="font-bold text-zinc-950">Yabancı Dil: </span>
-              <span>Türkçe (Ana Dil) • İngilizce (Mesleki / Teknik Dokümantasyon Okuma ve Geliştirme)</span>
+              <span className="font-bold text-zinc-950">Yabancı Dil &amp; Sertifika: </span>
+              <span>
+                Türkçe (Ana Dil) • İngilizce — EF SET A1 Sertifikalı (Doğrulama:{" "}
+                <a
+                  href="https://cert.efset.org/en/vSZxnD"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-cyan-700 underline font-mono"
+                >
+                  cert.efset.org/en/vSZxnD
+                </a>
+                ) &amp; Mesleki Teknik Dokümantasyon Okuma
+              </span>
             </div>
             <div>
               <span className="font-bold text-zinc-950">Mühendislik Yaklaşımı: </span>
