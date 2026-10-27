@@ -52,8 +52,8 @@ export const PORTFOLIO_DATA = {
     email: "mehmetc4122@gmail.com",
     github: "https://github.com/luxiq213",
     linkedin: "https://linkedin.com",
-    portfolioUrl: "https://portfolio-fyi0li9cq-luxiq213s-projects.vercel.app/",
-    cvDownloadUrl: "/Mehmet_Comert_CV.pdf?v=7",
+    portfolioUrl: "https://portfolio-luxiq213s-projects.vercel.app/",
+    cvDownloadUrl: "/Mehmet_Comert_CV.pdf?v=8",
     cvViewUrl: "/cv",
     bio: "Ondokuz Mayıs Üniversitesi Bilgisayar Programcılığı mezunuyum. Flutter (Riverpod, InAppWebView) ve Supabase Edge Functions kullanarak Android ve iOS mağazalarında canlı yayında olan ürünler (MangaLens: Manga Çeviri, AstraNova: Astroloji & Burç) geliştirdim. Projelerimde Google Gemini multimodal vision API, görsel önbellekleme, RevenueCat IAP/abonelik, AdMob ödüllü reklam doğrulaması ve PostgreSQL tabanlı kredi/bakiye yönetimi kurguladım. Web tarafında ise Next.js (App Router), React 19, TypeScript, Prisma + PostgreSQL, NextAuth ve Stripe ile çok dilli (9 dil) canlı SaaS platformları (propromptgen.com) üretiyorum.",
     typewriterRoles: [

@@ -39,7 +39,7 @@ export default function CvPage() {
           </button>
 
           <a
-            href="/Mehmet_Comert_CV.pdf?v=7"
+            href="/Mehmet_Comert_CV.pdf?v=8"
             download="Mehmet_Comert_CV.pdf"
             className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl font-medium text-zinc-200 bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 transition-all"
           >
@@ -96,12 +96,12 @@ export default function CvPage() {
               <Globe className="w-3.5 h-3.5 text-cyan-700 shrink-0" />
               <span className="font-semibold text-zinc-900">3D Portföy:</span>
               <a
-                href="https://portfolio-fyi0li9cq-luxiq213s-projects.vercel.app/"
+                href="https://portfolio-luxiq213s-projects.vercel.app/"
                 target="_blank"
                 rel="noreferrer"
                 className="text-cyan-700 underline hover:text-cyan-900 font-mono text-[11px]"
               >
-                portfolio-fyi0li9cq-luxiq213s-projects.vercel.app
+                portfolio-luxiq213s-projects.vercel.app
               </a>
             </div>
           </div>
