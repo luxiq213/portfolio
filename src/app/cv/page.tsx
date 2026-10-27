@@ -39,7 +39,7 @@ export default function CvPage() {
           </button>
 
           <a
-            href="/Mehmet_Comert_CV.pdf?v=4"
+            href="/Mehmet_Comert_CV.pdf?v=5"
             download="Mehmet_Comert_CV.pdf"
             className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl font-medium text-zinc-200 bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 transition-all"
           >
@@ -113,14 +113,11 @@ export default function CvPage() {
             Profil
           </h2>
           <p className="text-xs sm:text-sm text-zinc-700 leading-relaxed text-justify">
-            Ondokuz Mayıs Üniversitesi Bilgisayar Programcılığı mezunu, <strong>Flutter ve Dart</strong> ile Android ve iOS uygulamaları geliştiren yazılım geliştirici. 
-            <strong> MangaLens: Manga Çeviri</strong> uygulamasını her iki mobil mağazada (Google Play ve App Store) uçtan uca yayımlama sürecini tamamladı; 
-            <strong> AstraNova: Astroloji &amp; Burç</strong> mobil uygulaması ve <strong>Next.js / TypeScript</strong> ile geliştirilen <strong>ProPromptGen</strong> web ürünü üzerinde çalıştı. 
-            Mobil arayüz mimarisi, güvenli API/LLM entegrasyonu, uygulama içi satın alma (IAP) ve kullanıcı odaklı ürün geliştirmeye odaklanıyor.
+            <strong>Flutter ve Dart</strong> ile Android ve iOS için uçtan uca mobil ürünler geliştiren, <strong>React, Next.js ve TypeScript</strong> ile modern web uygulamaları inşa eden yazılım geliştirici. Çok modlu yapay zeka entegrasyonu, sunucu tarafı güvenlik ve maliyet optimizasyonu, uygulama içi satın alma mimarisi ve mağaza yayın süreçlerinde üretim deneyimine sahip.
           </p>
         </section>
 
-        {/* Section 2: Selected Products & Live Applications (Moved to top 1/3 per audit) */}
+        {/* Section 2: Selected Products & Live Applications (Unified section with engineering case details) */}
         <section className="mb-6">
           <h2 className="text-sm font-bold uppercase tracking-wider text-zinc-950 border-b border-zinc-300 pb-1 mb-3">
             Seçili Ürünler &amp; Yayınlanan Uygulamalar
@@ -138,12 +135,12 @@ export default function CvPage() {
                 </span>
               </div>
               <p className="text-[11px] font-mono text-zinc-600 mt-0.5">
-                Kullanılan Teknolojiler: Flutter, Dart, Riverpod, InAppWebView (JS Bridge), Supabase, Gemini Multimodal AI, RevenueCat IAP, AdMob, Codemagic CI/CD
+                Flutter, Dart, Riverpod, InAppWebView, Supabase Edge Functions, Gemini API, RevenueCat, AdMob, Codemagic
               </p>
-              <ul className="list-disc list-inside text-xs text-zinc-700 mt-1.5 space-y-0.5">
-                <li><strong>Ürün &amp; Okuma Deneyimi:</strong> Flutter ve Riverpod ile geliştirip Google Play ve App Store&apos;da yayımladım. Uygulama içi özel tarayıcıda manga sayfalarını kaynak görseli değiştirmeden 104 hedef dile çeviren ve çeviri kutusunun görünümünü (font, boyut, renk, opaklık, kenarlık) canlı özelleştiren ayrık katman arayüzünü hayata geçirdim.</li>
-                <li><strong>Kullanıcı Akışı, Gelir Modeli &amp; Yerelleştirme:</strong> Kayıt zorunluluğu olmayan anonim oturumdan OAuth/e-posta hesabına yükseltme akışını, RevenueCat ile <code>LENS</code> kredi paketleri ve Plus/Pro abonelik sistemini, ödüllü reklam/promosyon modüllerini ve 18 arayüz dilini (RTL dahil) geliştirdim.</li>
-                <li><strong>Mağaza Dağıtımı &amp; Bulut Senkronizasyonu:</strong> Codemagic CI/CD boru hattı, Xcode imzalama, TestFlight, App Store Review ve Google Play Console sürüm/yayın süreçlerini sıfırdan yönettim; Plus/Pro aboneler için çeviri kutusu tercihlerinin cihazlar arası bulut senkronizasyonunu sağladım.</li>
+              <ul className="list-disc list-inside text-xs text-zinc-700 mt-1.5 space-y-1">
+                <li><strong>Arayüz &amp; Görsel Tiling Mimarisi:</strong> Uygulama içi tarayıcıda dikey manga şeritlerini kaynak görseli bozmadan 104 hedef dile çeviren ve çeviri kutusu stilini canlı özelleştiren ayrık DOM katmanı geliştirdim; JS köprüsüyle <em>viewport-first tiling</em> uygulayarak ilk çeviri görünme süresini (<code>time_to_first_translation_overlay_ms</code>) düşürdüm.</li>
+                <li><strong>Backend Güvenliği &amp; Eşzamanlı AI Maliyet Kilidi:</strong> API anahtarlarını istemciden izole etmek için <code>gemini-3.5-flash</code> çağrılarını Supabase Edge Functions arkasına aldım; görsel URL&apos;nin SHA-256 özetiyle 24 saatlik önbellek ve aynı sayfaya gelen eşzamanlı isteklerde mükerrer çağrıyı önleyen <code>translation_work_leases</code> kilit yapısını kurdum.</li>
+                <li><strong>Gelir Modeli, Atomik Muhasebe &amp; Kalite Güvencesi:</strong> Anonim oturumdan OAuth/e-posta hesabına yükseltme akışını, RevenueCat kredi/abonelik sistemini ve RTL dahil 18 arayüz dilini kurguladım. Başarısız işlemlerde otomatik kredi iadesini ve AdMob SSV ödül doğrulamasını PostgreSQL RPC&apos;leriyle atomik hale getirip 16 birim/widget testi, <code>flutter analyze</code>, <em>p50/p95</em> telemetri ve Codemagic CI/CD ile her iki mağazada yayımladım.</li>
               </ul>
               <div className="mt-1 text-[11px] text-zinc-600 font-mono space-y-0.5">
                 <div>
@@ -166,11 +163,11 @@ export default function CvPage() {
                 </span>
               </div>
               <p className="text-[11px] font-mono text-zinc-600 mt-0.5">
-                Kullanılan Teknolojiler: Next.js 16 (App Router, SSR), React 19, TypeScript, Google Gemini API, Prisma ORM, PostgreSQL, NextAuth, Stripe
+                Next.js 16, React 19, TypeScript, Google Gemini API, Prisma ORM, PostgreSQL, NextAuth, Stripe
               </p>
-              <ul className="list-disc list-inside text-xs text-zinc-700 mt-1.5 space-y-0.5">
-                <li><strong>Ürün &amp; Çok Dilli Platform:</strong> Next.js ve TypeScript ile kullanıcı girdisini ChatGPT, Claude, Gemini ve Midjourney dahil 50+ AI platformuna uygun yapılandırılmış promptlara dönüştüren, route tabanlı 9 dil (<code>tr, en, de, fr, es, it, pt, ru, ja</code>) destekli ve mobil uyumlu web ürününü geliştirdim.</li>
-                <li><strong>Topluluk, Kimlik Doğrulama &amp; Abonelik:</strong> Prisma ve PostgreSQL üzerinde çok dilli prompt paylaşımı, beğeni, iç içe yorum, yer imi (bookmark), takip/bildirim sistemi, yönetim paneli ve Stripe webhook&apos;larıyla aylık/yıllık Premium üyelik döngüsünü kurguladım.</li>
+              <ul className="list-disc list-inside text-xs text-zinc-700 mt-1.5 space-y-1">
+                <li><strong>Kesinti Toleranslı Üretim &amp; Çok Dilli Platform:</strong> Kullanıcı girdisini ChatGPT, Claude, Gemini ve Midjourney dahil 50+ AI modeline uygun yapılandırılmış promptlara dönüştüren, route tabanlı 9 dil destekli web ürününü geliştirdim; harici API gecikmelerinde veya kota aşımında servisin durmaması için <code>@google/generative-ai</code> arkasına kural ve şablon tabanlı fallback motoru ekledim.</li>
+                <li><strong>Paylaşımlı Rate Limit, Token Güvenliği &amp; Abonelik:</strong> Çoklu serverless örneklerde bellek içi sayaçlar sıfırlandığı için hız sınırlamasını PostgreSQL üzerindeki paylaşımlı <code>RateLimit</code> tablosuna taşıdım; şifre sıfırlama akışında ham token yerine yalnızca SHA-256 özeti (<code>token_hash</code>) ve <code>bcryptjs</code> kullandım. Topluluk etkileşimlerini, Stripe webhook abonelik döngüsünü ve Critters / Web Vitals optimizasyonlarını tamamladım.</li>
               </ul>
               <div className="mt-1 text-[11px] text-zinc-600 font-mono">
                 Canlı Bağlantı: <a href="https://propromptgen.com" target="_blank" rel="noreferrer" className="text-violet-700 underline">https://propromptgen.com</a>
@@ -188,10 +185,11 @@ export default function CvPage() {
                 </span>
               </div>
               <p className="text-[11px] font-mono text-zinc-600 mt-0.5">
-                Kullanılan Teknolojiler: Flutter, Dart, Efemeris &amp; Natal Harita Motoru, Firebase + Google Gemini API, Yerel Depolama (Hive / SharedPreferences), 9 Dil Yerelleştirme
+                Flutter, Dart, Efemeris Motoru, Firebase, Google Gemini API, Hive, SharedPreferences
               </p>
-              <ul className="list-disc list-inside text-xs text-zinc-700 mt-1.5 space-y-0.5">
-                <li><strong>Ürün &amp; Kişiselleştirilmiş Deneyim:</strong> Doğum tarihi, saati ve konum verilerine göre Güneş/Ay/Yükselen (&quot;Büyük Üçlü&quot;), gezegen yerleşimleri ve evleri hesaplayan doğum haritası (natal harita), ilişki uyumu (sinastri), ay/retro takvimi ve gerçek zamanlı AI danışman (&quot;Kahin&quot;) modüllerini 9 dil desteğiyle geliştirdim.</li>
+              <ul className="list-disc list-inside text-xs text-zinc-700 mt-1.5 space-y-1">
+                <li><strong>Çevrimdışı Astronomik Hesaplama &amp; Bağlam Enjeksiyonu:</strong> Statik burç metinleri yerine doğum tarihi, saat dilimi ve coğrafi koordinatlardan <em>Julian Day</em> ve <em>Local Sidereal Time</em> üzerinden Güneş, Ay, Yükselen, gezegen boylamları ve evleri hesaplayan efemeris motoru yazdım; üretilen natal harita vektörünü Firebase üzerinden Gemini API&apos;ye sistem bağlamı olarak enjekte ederek gerçek zamanlı AI danışman ve sinastri analizini geliştirdim.</li>
+                <li><strong>Uç Değer Doğrulaması &amp; Yerel Önbellek:</strong> Farklı zaman dilimleri ve enlem/boylam uç değerleri için açısal hesaplama doğrulaması yaptım; hesaplanan harita ve profil verilerini <code>Hive</code> ve <code>SharedPreferences</code> ile cihazda önbellekleyerek 9 dilde çevrimdışı erişim sağladım.</li>
               </ul>
               <div className="mt-1 text-[11px] text-zinc-600 font-mono">
                 Google Play: <a href="https://play.google.com/store/apps/details?id=com.astro.yapici" target="_blank" rel="noreferrer" className="text-emerald-700 underline">play.google.com/store/apps/details?id=com.astro.yapici</a>
@@ -206,90 +204,70 @@ export default function CvPage() {
           <span className="hidden sm:inline-block print:hidden absolute top-4 right-6 text-[11px] font-mono text-zinc-400 bg-zinc-100 px-2.5 py-0.5 rounded-full border border-zinc-200">
             Sayfa 2 / 2
           </span>
-        {/* Section 3: Technical Skills (Single-column ATS layout, project-grounded) */}
+        {/* Section 3: Technical Skills */}
         <section className="mb-8">
           <h2 className="text-base font-bold uppercase tracking-wider text-zinc-950 border-b-2 border-zinc-300 pb-1.5 mb-3.5">
-            Teknik Yetkinlikler (Proje Kullanımına Göre)
+            Teknik Yetkinlikler
           </h2>
           <div className="space-y-3 text-sm text-zinc-800 leading-relaxed">
             <div className="p-3.5 rounded-lg bg-zinc-50 border border-zinc-200">
-              <p className="font-bold text-zinc-950 mb-0.5">Flutter &amp; Mobil Uygulama Geliştirme</p>
-              <p>Flutter, Dart, Riverpod (State Management), InAppWebView &amp; JavaScript Köprüsü (DOM Overlay Mimarisi), RevenueCat (IAP &amp; Abonelik Yönetimi), Google Mobile Ads (AdMob SSV), SharedPreferences &amp; Hive Yerel Depolama, Çoklu Dil / l10n (18 Dil &amp; RTL Desteği).</p>
+              <p className="font-bold text-zinc-950 mb-0.5">Mobil Geliştirme</p>
+              <p>Flutter, Dart, Riverpod, InAppWebView, JavaScript Bridge, RevenueCat, AdMob, Hive, SharedPreferences, Flutter l10n</p>
             </div>
             <div className="p-3.5 rounded-lg bg-zinc-50 border border-zinc-200">
-              <p className="font-bold text-zinc-950 mb-0.5">Mobil Ürün Kalitesi, Test &amp; Mağaza Dağıtımı</p>
-              <p>Google Play Console &amp; Apple App Store Connect (Xcode İmzalama, TestFlight, Store Review Süreçleri), Codemagic CI/CD, Otomatik Birim &amp; Widget Testleri (<code>flutter test</code>, <code>flutter analyze</code> sıfır hata), İstemci Performans ve Gecikme Telemetrisi (p50/p95 ölçümü).</p>
+              <p className="font-bold text-zinc-950 mb-0.5">Web &amp; Frontend Geliştirme</p>
+              <p>React 19, Next.js 16, TypeScript, JavaScript, Tailwind CSS, Three.js, SSR, Dinamik SEO, Critters, Web Vitals</p>
             </div>
             <div className="p-3.5 rounded-lg bg-zinc-50 border border-zinc-200">
-              <p className="font-bold text-zinc-950 mb-0.5">API, Backend, Veritabanı &amp; Güvenlik Mimarisi</p>
-              <p>Supabase (PostgreSQL, Row Level Security / RLS, Edge Functions / Deno, Anonim Oturumdan OAuth/E-Posta Hesabına Yükseltme), Sunucu Tarafı Sır/Anahtar İzolasyonu, SHA-256 Görsel Önbellekleme (24s Cache), Paralel Çalışma Kilitleri (Work Leases), Değişmez Muhasebe Defteri (Immutable Ledger) RPC&apos;leri, Dağıtık Rate Limiting, HTTPS/SSRF Kontrolleri.</p>
+              <p className="font-bold text-zinc-950 mb-0.5">Backend, Veritabanı &amp; Güvenlik</p>
+              <p>Supabase, PostgreSQL, Row Level Security, Supabase Edge Functions, Deno, Prisma ORM, NextAuth, bcryptjs, Stripe Webhooks, REST API, C#, .NET</p>
             </div>
             <div className="p-3.5 rounded-lg bg-zinc-50 border border-zinc-200">
-              <p className="font-bold text-zinc-950 mb-0.5">React, Next.js &amp; Modern Web Geliştirme</p>
-              <p>Next.js 16 (App Router, Server-Side Rendering, Dinamik SEO), React 19, TypeScript (Tip Güvenli Geliştirme), Prisma ORM, PostgreSQL, NextAuth (<code>bcryptjs</code>, SHA-256 Token Özetleme), Stripe Abonelik &amp; Webhook Entegrasyonu, Tailwind CSS, Three.js (3D WebGL), Critters Kritik CSS &amp; Web Vitals.</p>
+              <p className="font-bold text-zinc-950 mb-0.5">Test, CI/CD &amp; Mağaza Süreçleri</p>
+              <p>flutter test, flutter analyze, Codemagic CI/CD, Git, GitHub, Google Play Console, Apple App Store Connect, Xcode, TestFlight</p>
             </div>
           </div>
         </section>
 
-        {/* Section 4: Engineering Decisions & Architecture Cases */}
-        <section className="mb-8">
-          <h2 className="text-base font-bold uppercase tracking-wider text-zinc-950 border-b-2 border-zinc-300 pb-1.5 mb-3.5">
-            Teknik Vaka İncelemeleri (Problem → Mimari Karar → Test &amp; Sonuç)
-          </h2>
-          <div className="space-y-3.5 text-sm text-zinc-700 leading-relaxed">
-            <div className="border-l-4 border-cyan-600 pl-3.5 space-y-1">
-              <p className="font-bold text-zinc-950">1. MangaLens — Görsel Tiling, Eşzamanlı AI Maliyet Kilidi ve Atomik Kredi Muhasebesi</p>
-              <p><strong>Problem &amp; Mimari Karar:</strong> Uzun dikey manga şeritlerinde ilk çeviri görünme süresini (<code>time_to_first_translation_overlay_ms</code>) düşürmek için JS köprüsüyle görünür bölge öncelikli parçalama (<em>viewport-first tiling</em>) uygulandı. İstemcide API anahtarı tutmak yerine tüm <code>gemini-3.5-flash</code> çağrıları Supabase Edge Functions arkasına alındı; görsel URL&apos;nin SHA-256 özetiyle 24 saatlik önbellek ve aynı sayfaya gelen eşzamanlı isteklerde mükerrer LLM çağrısını önleyen çalışma kilitleri (<code>translation_work_leases</code>) kuruldu.</p>
-              <p><strong>Test &amp; Sonuç:</strong> Başarısız AI çağrılarında kredi iadesi ve Google açık anahtar imzalı AdMob SSV ödül yüklemeleri değişmez muhasebe defteri (<em>immutable ledger</em>) RPC&apos;leriyle atomik hale getirildi; <code>credit_account_test</code> ve <code>translation_block_test</code> dahil 16 birim/widget testi, <code>flutter analyze</code> (sıfır hata) ve <em>p50/p95</em> telemetri ile doğrulandı.</p>
-            </div>
-            <div className="border-l-4 border-violet-600 pl-3.5 space-y-1">
-              <p className="font-bold text-zinc-950">2. ProPromptGen — Kesinti Toleranslı (Fallback) Üretim, Paylaşımlı Rate Limit ve Token Güvenliği</p>
-              <p><strong>Problem &amp; Mimari Karar:</strong> Harici LLM API gecikmelerinde veya kota aşımında servisin durmaması için <code>@google/generative-ai</code> çağrısının arkasına kural/şablon tabanlı derleyici (<em>fallback engine</em>) eklendi. Çoklu serverless örneklerde bellek içi sayaçlar sıfırlandığı için hız sınırlaması PostgreSQL üzerindeki paylaşımlı <code>RateLimit</code> tablosuna taşındı.</p>
-              <p><strong>Test &amp; Sonuç:</strong> Veritabanı sızıntısı riskine karşı şifre sıfırlama akışında ham token yerine yalnızca SHA-256 özeti (<code>token_hash</code>) ve <code>bcryptjs</code> kullanıldı; <em>Critters</em> kritik CSS ve <em>Web Vitals</em> kontrolleriyle 9 dilde kesintisiz üretim ve hızlı SSR açılışı sağlandı.</p>
-            </div>
-            <div className="border-l-4 border-emerald-600 pl-3.5 space-y-1">
-              <p className="font-bold text-zinc-950">3. AstraNova — Çevrimdışı Astronomik Hesaplama (Julian Day / Sidereal Time) ve Bağlam Enjeksiyonu</p>
-              <p><strong>Problem &amp; Mimari Karar:</strong> Statik burç metinleri yerine gerçek gök mekaniği sunmak için doğum tarihi (UTC), saat dilimi ve coğrafi koordinatlardan <em>Julian Day</em> ve yerel yıldız zamanı (<em>Local Sidereal Time</em>) üzerinden gezegen boylamlarını hesaplayan efemeris motoru yazıldı; üretilen natal harita vektörü Firebase üzerinden Gemini API&apos;ye sistem bağlamı (<em>context</em>) olarak enjekte edildi.</p>
-              <p><strong>Test &amp; Sonuç:</strong> Farklı zaman dilimleri ve enlem/boylam uç değerleri için açısal hesaplama doğrulaması yapıldı; hesaplanan haritalar <code>Hive / SharedPreferences</code> ile cihazda önbelleklenerek internet bağlantısı olmadan da anlık erişim sağlandı.</p>
-            </div>
-          </div>
-        </section>
-
-        {/* Section 5: Experience & Education */}
+        {/* Section 4: Corporate Experience */}
         <section className="mb-6">
           <h2 className="text-sm font-bold uppercase tracking-wider text-zinc-950 border-b border-zinc-300 pb-1 mb-2.5">
-            Kurumsal Deneyim &amp; Eğitim
+            Kurumsal Deneyim
           </h2>
-          <div className="space-y-3">
-            <div>
-              <div className="flex flex-wrap items-center justify-between gap-1">
-                <h3 className="text-xs sm:text-sm font-bold text-zinc-950">
-                  Körfez Belediyesi — Bilgi İşlem Müdürlüğü
-                </h3>
-                <span className="text-xs font-mono text-zinc-600">Üniversite / Yaz Stajı</span>
-              </div>
-              <p className="text-xs font-medium text-cyan-800">
-                Bilgi İşlem &amp; Yazılım Stajyeri
-              </p>
-              <p className="text-xs text-zinc-600 mt-0.5">
-                Bilgi İşlem Müdürlüğü bünyesinde kurumsal yazılım süreçlerinin, ilişkisel veritabanı (SQL) yapılarının ve kurum içi bilgi sistemlerinin incelenmesi, veri akışı ve teknik operasyon süreçlerinin desteklenmesi.
-              </p>
+          <div>
+            <div className="flex flex-wrap items-center justify-between gap-1">
+              <h3 className="text-xs sm:text-sm font-bold text-zinc-950">
+                Körfez Belediyesi — Bilgi İşlem Müdürlüğü
+              </h3>
+              <span className="text-xs font-mono text-zinc-600">Üniversite / Yaz Stajı</span>
             </div>
+            <p className="text-xs font-medium text-cyan-800">
+              Bilgi İşlem &amp; Yazılım Stajyeri
+            </p>
+            <p className="text-xs text-zinc-600 mt-0.5">
+              Bilgi İşlem Müdürlüğü bünyesinde kurumsal yazılım süreçlerinin, ilişkisel veritabanı yapılarının ve kurum içi bilgi sistemlerinin incelenmesi, veri akışı ve teknik operasyon süreçlerinin desteklenmesi.
+            </p>
+          </div>
+        </section>
 
-            <div className="pt-2 border-t border-zinc-200">
-              <div className="flex flex-wrap items-center justify-between gap-1">
-                <h3 className="text-xs sm:text-sm font-bold text-zinc-950">
-                  Ondokuz Mayıs Üniversitesi (OMÜ)
-                </h3>
-                <span className="text-xs font-mono text-zinc-600">Mezun</span>
-              </div>
-              <p className="text-xs font-medium text-cyan-800">
-                Bilgisayar Programcılığı (Ön Lisans)
-              </p>
-              <p className="text-xs text-zinc-600 mt-0.5">
-                Temel dersler: Algoritmalar ve Veri Yapıları, Nesne Yönelimli Programlama (OOP), Veritabanı Yönetimi (SQL), Web ve Mobil Programlama.
-              </p>
+        {/* Section 5: Education */}
+        <section className="mb-6">
+          <h2 className="text-sm font-bold uppercase tracking-wider text-zinc-950 border-b border-zinc-300 pb-1 mb-2.5">
+            Eğitim
+          </h2>
+          <div>
+            <div className="flex flex-wrap items-center justify-between gap-1">
+              <h3 className="text-xs sm:text-sm font-bold text-zinc-950">
+                Ondokuz Mayıs Üniversitesi
+              </h3>
+              <span className="text-xs font-mono text-zinc-600">Mezun</span>
             </div>
+            <p className="text-xs font-medium text-cyan-800">
+              Bilgisayar Programcılığı (Ön Lisans)
+            </p>
+            <p className="text-xs text-zinc-600 mt-0.5">
+              Temel Dersler: Algoritmalar ve Veri Yapıları, Nesne Yönelimli Programlama, İlişkisel Veritabanı Yönetim Sistemleri, Web ve Mobil Programlama.
+            </p>
           </div>
         </section>
 
@@ -302,7 +280,7 @@ export default function CvPage() {
             <div>
               <span className="font-bold text-zinc-950">Yabancı Dil &amp; Sertifika: </span>
               <span>
-                Türkçe (Ana Dil) • İngilizce — EF SET A1 Sertifikalı (Doğrulama:{" "}
+                Türkçe (Ana Dil) • İngilizce — EF SET A1 Sertifikalı (
                 <a
                   href="https://cert.efset.org/en/vSZxnD"
                   target="_blank"
@@ -316,7 +294,7 @@ export default function CvPage() {
             </div>
             <div>
               <span className="font-bold text-zinc-950">Mühendislik Yaklaşımı: </span>
-              <span>Uçtan Uca Ürün Sahipliği (Tasarım → Geliştirme → Otomatik Test → Mağaza Yayını), Güvenlik Öncelikli API Mimarisi, Maliyet/Performans Ölçümü ve Git İş Akışı</span>
+              <span>Uçtan Uca Ürün Sahipliği, Güvenlik Öncelikli API Mimarisi, Otomatik Test, Maliyet/Performans Ölçümü ve Git İş Akışı</span>
             </div>
           </div>
         </section>

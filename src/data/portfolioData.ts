@@ -53,7 +53,7 @@ export const PORTFOLIO_DATA = {
     github: "https://github.com/luxiq213",
     linkedin: "https://linkedin.com",
     portfolioUrl: "https://portfolio-fyi0li9cq-luxiq213s-projects.vercel.app/",
-    cvDownloadUrl: "/Mehmet_Comert_CV.pdf?v=4",
+    cvDownloadUrl: "/Mehmet_Comert_CV.pdf?v=5",
     cvViewUrl: "/cv",
     bio: "Ondokuz Mayıs Üniversitesi Bilgisayar Programcılığı mezunuyum. Flutter (Riverpod, InAppWebView) ve Supabase Edge Functions kullanarak Android ve iOS mağazalarında canlı yayında olan ürünler (MangaLens: Manga Çeviri, AstraNova: Astroloji & Burç) geliştirdim. Projelerimde Google Gemini multimodal vision API, SHA-256 önbellekleme, RevenueCat IAP/abonelik, AdMob SSV doğrulaması ve atomik kredi/ledger mimarileri kurguladım. Web tarafında ise Next.js (App Router), React 19, TypeScript, Prisma + PostgreSQL, NextAuth ve Stripe ile çok dilli (9 dil) canlı SaaS platformları (propromptgen.com) üretiyorum.",
     typewriterRoles: [
@@ -76,7 +76,7 @@ export const PORTFOLIO_DATA = {
 
     // Web & React
     { name: "React 19 & Next.js 16 (App Router, SSR)", category: "Web & React", level: 90, iconName: "Globe", highlight: true },
-    { name: "TypeScript & Tip Güvenli Full-Stack Geliştirme", category: "Web & React", level: 88, iconName: "FileJson", highlight: true },
+    { name: "TypeScript & JavaScript (ES6+)", category: "Web & React", level: 88, iconName: "FileJson", highlight: true },
     { name: "Çok Dilli (i18n) Route Mimarisi & Dinamik SEO", category: "Web & React", level: 88, iconName: "Globe", highlight: true },
     { name: "Tailwind CSS & Responsive UI/UX", category: "Web & React", level: 92, iconName: "Palette" },
     { name: "Three.js & 3D WebGL Sahneleri", category: "Web & React", level: 75, iconName: "Box" },
