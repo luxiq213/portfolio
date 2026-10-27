@@ -110,7 +110,7 @@ export default function Hero() {
             </a>
 
             <a
-              href="/Mehmet_Comert_CV.pdf?v=5"
+              href="/Mehmet_Comert_CV.pdf?v=6"
               download="Mehmet_Comert_CV.pdf"
               onClick={handleCvDownload}
               className="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-medium text-zinc-200 bg-zinc-900/80 hover:bg-zinc-800 border border-zinc-700 hover:border-cyan-500/40 transition-all transform hover:-translate-y-0.5"

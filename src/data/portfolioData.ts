@@ -53,9 +53,9 @@ export const PORTFOLIO_DATA = {
     github: "https://github.com/luxiq213",
     linkedin: "https://linkedin.com",
     portfolioUrl: "https://portfolio-fyi0li9cq-luxiq213s-projects.vercel.app/",
-    cvDownloadUrl: "/Mehmet_Comert_CV.pdf?v=5",
+    cvDownloadUrl: "/Mehmet_Comert_CV.pdf?v=6",
     cvViewUrl: "/cv",
-    bio: "Ondokuz Mayıs Üniversitesi Bilgisayar Programcılığı mezunuyum. Flutter (Riverpod, InAppWebView) ve Supabase Edge Functions kullanarak Android ve iOS mağazalarında canlı yayında olan ürünler (MangaLens: Manga Çeviri, AstraNova: Astroloji & Burç) geliştirdim. Projelerimde Google Gemini multimodal vision API, SHA-256 önbellekleme, RevenueCat IAP/abonelik, AdMob SSV doğrulaması ve atomik kredi/ledger mimarileri kurguladım. Web tarafında ise Next.js (App Router), React 19, TypeScript, Prisma + PostgreSQL, NextAuth ve Stripe ile çok dilli (9 dil) canlı SaaS platformları (propromptgen.com) üretiyorum.",
+    bio: "Ondokuz Mayıs Üniversitesi Bilgisayar Programcılığı mezunuyum. Flutter (Riverpod, InAppWebView) ve Supabase Edge Functions kullanarak Android ve iOS mağazalarında canlı yayında olan ürünler (MangaLens: Manga Çeviri, AstraNova: Astroloji & Burç) geliştirdim. Projelerimde Google Gemini multimodal vision API, görsel önbellekleme, RevenueCat IAP/abonelik, AdMob ödüllü reklam doğrulaması ve PostgreSQL tabanlı kredi/bakiye yönetimi kurguladım. Web tarafında ise Next.js (App Router), React 19, TypeScript, Prisma + PostgreSQL, NextAuth ve Stripe ile çok dilli (9 dil) canlı SaaS platformları (propromptgen.com) üretiyorum.",
     typewriterRoles: [
       "Flutter & Supabase Full-Stack Mobil Geliştirici",
       "Next.js, React 19 & TypeScript Geliştiricisi",
@@ -84,7 +84,7 @@ export const PORTFOLIO_DATA = {
 
     // Yapay Zeka & Araçlar
     { name: "Google Gemini Multimodal Vision & Structured JSON", category: "Yapay Zeka & Araçlar", level: 92, iconName: "Sparkles", highlight: true },
-    { name: "AI Maliyet Optimizasyonu (SHA-256 Cache & Work Lease)", category: "Yapay Zeka & Araçlar", level: 90, iconName: "Cpu", highlight: true },
+    { name: "AI Maliyet Optimizasyonu & Görsel Önbellekleme (Cache)", category: "Yapay Zeka & Araçlar", level: 90, iconName: "Cpu", highlight: true },
     { name: "Prompt Mühendisliği & Kural/Şablon Fallback Motoru", category: "Yapay Zeka & Araçlar", level: 90, iconName: "Bot", highlight: true },
     { name: "Git, GitHub & Codemagic CI/CD", category: "Yapay Zeka & Araçlar", level: 88, iconName: "GitBranch", highlight: true },
     { name: "Deno, VS Code, Xcode & Android Studio", category: "Yapay Zeka & Araçlar", level: 92, iconName: "Monitor" },
@@ -94,7 +94,7 @@ export const PORTFOLIO_DATA = {
     { name: "Supabase (PostgreSQL, RLS, Auth & Edge Functions)", category: "Backend & Veritabanı", level: 90, iconName: "Server", highlight: true },
     { name: "Prisma ORM & İlişkisel PostgreSQL Şema Tasarımı", category: "Backend & Veritabanı", level: 88, iconName: "Database", highlight: true },
     { name: "NextAuth (bcrypt, SHA-256 Token) & Stripe Webhooks", category: "Backend & Veritabanı", level: 86, iconName: "Cloud", highlight: true },
-    { name: "Atomik Kredi/Ledger RPC & Dağıtık Rate Limiting", category: "Backend & Veritabanı", level: 86, iconName: "HardDrive", highlight: true },
+    { name: "PostgreSQL RPC Fonksiyonları & Rate Limiting", category: "Backend & Veritabanı", level: 86, iconName: "HardDrive", highlight: true },
     { name: "C# (.NET) & Katmanlı OOP Prensipleri", category: "Backend & Veritabanı", level: 80, iconName: "Code" }
   ] as Skill[],
 
@@ -107,8 +107,8 @@ export const PORTFOLIO_DATA = {
       technologies: ["Flutter & Riverpod", "InAppWebView & JS Bridge", "Supabase Edge Functions", "Gemini 3.5 Flash Vision", "RevenueCat IAP", "AdMob SSV", "SHA-256 Cache"],
       features: [
         "InAppWebView ve JS köprüsüyle görünür bölge öncelikli görsel parçalama (tiling), normalize koordinatlarla kaydırma/zoom senkronlu DOM çeviri katmanı ve canlı kutu özelleştirmesi (font, renk, opaklık, kenarlık)",
-        "Supabase Edge Functions (translate-page) üzerinde Gemini 3.5 Flash multimodal vision ile yapılandırılmış JSON çevirisi; URL SHA-256 önbelleği (24s) ve çalışma kilitleriyle (work leases) mükerrer AI çağrısı ve maliyet koruması",
-        "RevenueCat webhook'ları ile idempotent LENS kredi cüzdanı ve Plus/Pro abonelik, hata anında otomatik iade yapan değişmez ledger RPC'leri ve AdMob SSV imzalı ödüllü reklam akışı",
+        "Supabase Edge Functions (translate-page) üzerinde Gemini 3.5 Flash multimodal vision ile yapılandırılmış JSON çevirisi; görsel URL önbelleği (24 saat) ile mükerrer AI çağrısı ve maliyet koruması",
+        "RevenueCat webhook'ları ile LENS kredi cüzdanı ve Plus/Pro abonelik, hata anında otomatik kredi iadesi yapan PostgreSQL fonksiyonları (RPC) ve AdMob ödüllü reklam akışı",
         "Anonim oturumdan OAuth/e-posta hesabına yükseltme, 18 arayüz dili (RTL dahil), p50/p95 gecikme telemetrisi ve 16 otomatik birim/widget testi (flutter test & analyze sıfır hata)"
       ],
       playStoreUrl: "https://play.google.com/store/apps/details?id=com.mangalens.app",
@@ -116,20 +116,20 @@ export const PORTFOLIO_DATA = {
       liveUrl: "https://play.google.com/store/apps/details?id=com.mangalens.app",
       featured: true,
       badge: "Google Play & App Store Canlı",
-      codeSnippet: `// Supabase Edge Function + Flutter: SHA-256 Cache, Work Lease & Overlay Akışı
-// 1. Görsel URL'nin SHA-256 özetiyle 24 saatlik cache & paralel lease kontrolü
-// 2. Cache miss durumunda Gemini 3.5 Flash Vision -> Structured JSON koordinatlar
-// 3. WebView JS Bridge ile normalize kutuları (bounding-box) DOM overlay'e bağlama
+      codeSnippet: `// Supabase Edge Function + Flutter: Görsel Önbellek & DOM Overlay Akışı
+// 1. Görsel URL'nin SHA-256 özetiyle 24 saatlik önbellek kontrolü
+// 2. Önbellekte yoksa Gemini 3.5 Flash Vision -> Yapılandırılmış JSON koordinatlar
+// 3. WebView JS Bridge ile çeviri kutularını (bounding-box) DOM katmanına çizme
 final result = await supabase.functions.invoke('translate-page', body: {
   'imageUrl': pageUrl,
   'imageHash': sha256.convert(utf8.encode(cleanUrl)).toString(),
   'targetLang': selectedLangCode,
 });`,
       caseStudy: {
-        problem: "Uzun dikey manga şeritlerindeki konuşma balonlarını orijinal görseli bozmadan düşük gecikmeyle çevirmek ve aynı sayfa için tekrarlayan Gemini API maliyetini önlemek.",
-        architecture: "InAppWebView üzerinde JS köprüsüyle çalışan ayrık DOM overlay mimarisi kuruldu. Uzun görseller görünür bölge öncelikli parçalara (tiling) bölündü; tüm AI çağrıları Supabase Edge Functions arkasına alınarak URL SHA-256 önbelleği (24s) ve paralel çalışma kilitleri (translation_work_leases) uygulandı.",
-        testing: "16 otomatik birim/widget testi (credit_account_test, translation_block_test, translation_overlay_preferences_test vb.), flutter analyze sıfır hata kontrolü, SSRF/HTTPS doğrulaması ve p50/p95 istemci gecikme telemetrisi.",
-        outcome: "API anahtarları istemciden %100 izole edildi, önbellek ve lease kilitleriyle mükerrer LLM maliyeti engellendi; hata anında atomik PostgreSQL ledger RPC'leriyle otomatik kredi iadesi garanti altına alındı."
+        problem: "Uzun dikey manga şeritlerindeki konuşma balonlarını orijinal görseli bozmadan hızlıca çevirmek ve aynı sayfa için tekrarlayan Gemini API maliyetini önlemek.",
+        architecture: "InAppWebView üzerinde JS köprüsüyle çalışan ayrık DOM overlay mimarisi kuruldu. Uzun görseller ekranda görünen bölgeye öncelik verecek şekilde parçalara bölündü; tüm AI çağrıları Supabase Edge Functions arkasına alınarak 24 saatlik URL önbelleği ve eşzamanlı istek kontrolü uygulandı.",
+        testing: "16 otomatik birim/widget testi (credit_account_test, translation_block_test, translation_overlay_preferences_test vb.) ve flutter analyze sıfır hata kontrolü.",
+        outcome: "API anahtarları istemciden izole edildi, önbellekleme ile mükerrer LLM maliyeti engellendi; hata anında PostgreSQL fonksiyonlarıyla (RPC) otomatik kredi iadesi sağlandı."
       }
     },
     {

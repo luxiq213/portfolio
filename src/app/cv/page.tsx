@@ -39,7 +39,7 @@ export default function CvPage() {
           </button>
 
           <a
-            href="/Mehmet_Comert_CV.pdf?v=5"
+            href="/Mehmet_Comert_CV.pdf?v=6"
             download="Mehmet_Comert_CV.pdf"
             className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl font-medium text-zinc-200 bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 transition-all"
           >
@@ -138,9 +138,9 @@ export default function CvPage() {
                 Flutter, Dart, Riverpod, InAppWebView, Supabase Edge Functions, Gemini API, RevenueCat, AdMob, Codemagic
               </p>
               <ul className="list-disc list-inside text-xs text-zinc-700 mt-1.5 space-y-1">
-                <li><strong>Arayüz &amp; Görsel Tiling Mimarisi:</strong> Uygulama içi tarayıcıda dikey manga şeritlerini kaynak görseli bozmadan 104 hedef dile çeviren ve çeviri kutusu stilini canlı özelleştiren ayrık DOM katmanı geliştirdim; JS köprüsüyle <em>viewport-first tiling</em> uygulayarak ilk çeviri görünme süresini (<code>time_to_first_translation_overlay_ms</code>) düşürdüm.</li>
-                <li><strong>Backend Güvenliği &amp; Eşzamanlı AI Maliyet Kilidi:</strong> API anahtarlarını istemciden izole etmek için <code>gemini-3.5-flash</code> çağrılarını Supabase Edge Functions arkasına aldım; görsel URL&apos;nin SHA-256 özetiyle 24 saatlik önbellek ve aynı sayfaya gelen eşzamanlı isteklerde mükerrer çağrıyı önleyen <code>translation_work_leases</code> kilit yapısını kurdum.</li>
-                <li><strong>Gelir Modeli, Atomik Muhasebe &amp; Kalite Güvencesi:</strong> Anonim oturumdan OAuth/e-posta hesabına yükseltme akışını, RevenueCat kredi/abonelik sistemini ve RTL dahil 18 arayüz dilini kurguladım. Başarısız işlemlerde otomatik kredi iadesini ve AdMob SSV ödül doğrulamasını PostgreSQL RPC&apos;leriyle atomik hale getirip 16 birim/widget testi, <code>flutter analyze</code>, <em>p50/p95</em> telemetri ve Codemagic CI/CD ile her iki mağazada yayımladım.</li>
+                <li><strong>Arayüz &amp; Görsel Parçalama Mimarisi:</strong> Uygulama içi tarayıcıda dikey manga şeritlerini kaynak görseli bozmadan 104 hedef dile çeviren ve çeviri kutusu stilini canlı özelleştiren ayrık DOM katmanı geliştirdim; JS köprüsüyle önce ekranda görünen bölgeyi parçalayıp çevirerek ilk çeviri görünme süresini düşürdüm.</li>
+                <li><strong>Backend Güvenliği &amp; AI Maliyet Optimizasyonu:</strong> API anahtarlarını istemciden izole etmek için <code>gemini-3.5-flash</code> çağrılarını Supabase Edge Functions arkasına aldım; görsel URL&apos;nin SHA-256 özetiyle 24 saatlik önbellek ve aynı sayfaya gelen eşzamanlı isteklerde mükerrer çağrıyı önleyen veritabanı kilit kontrolü kurdum.</li>
+                <li><strong>Gelir Modeli, Kredi Yönetimi &amp; Kalite Güvencesi:</strong> Anonim oturumdan OAuth/e-posta hesabına yükseltme akışını, RevenueCat kredi/abonelik sistemini ve RTL dahil 18 arayüz dilini kurguladım. Başarısız işlemlerde otomatik kredi iadesini ve AdMob ödüllü reklam doğrulamasını PostgreSQL fonksiyonlarıyla (RPC) yönetip 16 birim/widget testi, <code>flutter analyze</code> ve Codemagic CI/CD ile her iki mağazada yayımladım.</li>
               </ul>
               <div className="mt-1 text-[11px] text-zinc-600 font-mono space-y-0.5">
                 <div>
